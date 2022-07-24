@@ -40,11 +40,14 @@ safely but not be afraid of being stolen by others.`
 - прогрессивное улучшение
 
 ---
+
 ![warehouse](./module1/img/datawarehouse.jpg)
 
----
----
 
+***Ссылка на готовое приложение: [https://goodtimeforcoding.github.io/module2-production/](https://goodtimeforcoding.github.io/module2-production/)***
+
+
+---
 
 # Модуль 2
 
@@ -93,6 +96,15 @@ safely but not be afraid of being stolen by others.`
 
 ---
 
-![2048](./module2/img/2048.jpg)
+---
+
+## Для запуска проекта:
+
+- скачиваем репозиторий;
+- устанавливаем необходимые пакеты: *npm install*;
+- запускаем сборку: *npm run build*;
+- запускаем проект: *npm start*;
 
 ---
+
+***Ссылка на готовое приложение: [https://goodtimeforcoding.github.io/module2-production/](https://goodtimeforcoding.github.io/module2-production/)***
