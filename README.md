@@ -44,7 +44,7 @@ safely but not be afraid of being stolen by others.`
 ![warehouse](./module1/img/datawarehouse.jpg)
 
 
-***Ссылка на готовое приложение: [https://goodtimeforcoding.github.io/module2-production/](https://goodtimeforcoding.github.io/module2-production/)***
+***Ссылка на готовое приложение: [https://goodtimeforcoding.github.io/module1-production/](https://goodtimeforcoding.github.io/module1-production/)***
 
 
 ---
