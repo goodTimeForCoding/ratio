@@ -93,6 +93,6 @@ safely but not be afraid of being stolen by others.`
 
 ---
 
-![2048](./module2/img/2048.png)
+![2048](./module2/img/2048.jpg)
 
 ---
