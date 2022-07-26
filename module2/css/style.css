@@ -60,10 +60,21 @@ body {
 	display: block;
 }
 
-.start-form {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+.player-name-wrap {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.timer-wrap {
+	display: block;
+}
+
+.player-name {
+	width: 70%;
+}
+
+.timer {
+	width: 105px;
 }
 
 .results-title {
