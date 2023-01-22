@@ -1,13 +1,14 @@
 import {equalArrays} from './util.js';
 import {StartStop, Start} from './timer.js';
+import {getData, setPlayer} from './fetch';
+import {addPlayers} from './players';
 
 let startGameBtn = document.querySelector('#start-game');
 let playerName = document.querySelector('#player-name');
 let gridDisplay = document.querySelector('.grid');
 let scoreDispaly = document.querySelector('.score');
 let resultDisplay = document.querySelector('.status');
-let resultTemp = document.querySelector('#results-template');
-let resultsList = document.querySelector('.results');
+
 let width = 5;
 let squares = [];
 let score;
@@ -248,21 +249,13 @@ const keyControl = (evt) => {
   }
 }
 
-const addResult = () => {
-  let tempContent = resultTemp.content;
-  let newResult = tempContent.cloneNode(true);
-  let player = newResult.querySelector('.player');
-  let time = newResult.querySelector('.time');
-  player.textContent = playerName.value;
-  time.textContent = document.userData.stopwatch.value;
-  resultsList.appendChild(newResult);
-}
-
 const checkForWin = () => {
   for (let i = 0; i < squares.length; i++) {
     if (squares[i].innerHTML == 2048) {
+      let playerValue = playerName.value;
+      let timeValue = document.userData.stopwatch.value;
       StartStop();
-      addResult();
+      setPlayer(playerValue, timeValue, addPlayers);
       resultDisplay.innerHTML = 'Ты выиграл!';
       gridDisplay.style = 'opacity: 0.5'
       startGameBtn.addEventListener('click', startGame);
@@ -437,4 +430,5 @@ const endTouchControl = (evt) => {
   }
 }
 
+getData(addPlayers);
 startGameBtn.addEventListener('click', startGame);
