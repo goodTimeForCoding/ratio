@@ -1,0 +1,130 @@
+.article {
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__header {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 8px;
+    font-family: 'Libre Baskerville';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: @black;
+  }
+
+  &__tag {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 8px;
+    order: -1;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: fade(@lightblack, 50%);
+  }
+
+  &__author {
+    margin-bottom: 8px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: fade(@lightblack, 50%);
+  }
+
+  &__text {
+    margin: 0;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  &__bottom {
+    padding-top: 7.8vw;
+    background-color: white;
+  }
+
+  @media (min-width: @tablet-width) {
+
+    &__custom {
+      padding-bottom: 285px;
+      padding-left: 45px;
+      background-image: url(../../img/Article-top-Image\(tablet\).jpg);
+      background-repeat: no-repeat;
+      background-position: 0 center;
+      background-size: cover;
+    }
+
+    &__bottom {
+      padding-top: 0;
+      margin-top: 80px;
+      background-image: url(../../img/Article-Image\(tablet\).jpg);
+    }
+
+    &__wrap {
+      box-sizing: border-box;
+      width: 374px;
+      padding: 22px;
+      background-color: white;
+    }
+
+    &__header {
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    &__tag {
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+
+    &__custom {
+      padding-bottom: 109px;
+      background-image: url(../../img/Article-top-Image\(desktop\).jpg);
+    }
+
+    &__bottom {
+      padding: 55px 78px 55px 729px;
+      margin-top: 62px;
+      background-image: url(../../img/Article-Image\(desktop\).jpg);
+    }
+
+    &__wrap {
+      width: 509px;
+      padding: 76px 40px 96px;
+      background-color: white;
+    }
+
+    &__header {
+      margin-bottom: 12px;
+      font-weight: 700;
+      font-size: 33px;
+      line-height: 41px;
+    }
+
+    &__tag {
+      font-size: 20px;
+      line-height: 27px;
+    }
+
+    &__author {
+      font-size: 16px;
+      line-height: 22px;
+      margin-bottom: 12px;
+    }
+
+    &__text {
+      font-size: 16px;
+    }
+  }
+}

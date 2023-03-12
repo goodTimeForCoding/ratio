@@ -1,0 +1,117 @@
+.main-nav {
+  position: relative;
+
+  &__list {
+
+    @media (min-width: @tablet-width) {
+      display: flex;
+      justify-content: right;
+    }
+
+    @media (min-width: @desktop-width) {
+      justify-content: left;
+    }
+  }
+
+  &__toggle {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 48px;
+    height: 48px;
+    align-self: center;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+
+    &:hover,
+    &:active {
+      background-color: fade(black, 20%);
+    }
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
+  &__toggle::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 6px;
+    width: 36px;
+    height: 4px;
+    background-color: fade(black, 54%);
+    box-shadow: 0 10px 0 0 fade(black, 54%), 0 20px 0 0 fade(black, 54%);
+  }
+
+  &__toggle:active::before {
+    background-color: fade(black, 30%);
+    box-shadow:
+      0 10px 0 0 fade(black, 30%),
+      0 20px 0 0 fade(black, 30%);
+  }
+
+  &--closed &__list {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      width: auto;
+    }
+  }
+
+  &--opened &__list {
+    position: absolute;
+    margin: 0;
+    top: 60px;
+    right: 0;
+
+    @media (min-width: @tablet-width) {
+      position: static;
+      background-color: transparent;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      width: auto;
+    }
+  }
+
+  /*в nav добавим класс .main-nav--opened, тогда нарисуется крестик*/
+
+  &--opened &__toggle {
+    top: 0;
+    right: auto;
+    left: 0;
+
+    /*псевдоэлементы полосок крестика*/
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 21px;
+      left: 6px;
+      width: 36px;
+      height: 4px;
+      background-color: fade(black, 54%);
+    }
+
+    /*поворачиваем одну из полосок на 45, другую на -45*/
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    &:active::before,
+    &:active::after {
+      background-color: fade(black, 30%);
+    }
+  }
+}

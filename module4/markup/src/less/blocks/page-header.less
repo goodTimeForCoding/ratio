@@ -1,0 +1,18 @@
+.page-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 40px;
+
+  &__main-nav {
+    @media (min-width: @tablet-width) {
+      width: 71%;
+      padding-left: 4%;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-content: left;
+  }
+}

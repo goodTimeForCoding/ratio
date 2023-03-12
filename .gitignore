@@ -1,16 +1,24 @@
 # Файлы и папки операционной системы
 .DS_Store
 Thumbs.db
+npm-debug.log*
 
 # Файлы редактора
 .idea
 *.sublime*
-.vscode
+.vscode/
+*.ai
+*.log
+*.pdf
+*.psd
 
 # Вспомогательные файлы
 *.log*
-*/node_modules/
+**/node_modules/
 
-# Собранные файлы (допишите самостоятельно)
-*/main.bundle.js
-*/main.bundle.js.map
+# Собранные файлы
+**/bundle.js
+**/main.bundle.js
+**/bundle.js.map
+**/main.bundle.js.map
+**/dist/

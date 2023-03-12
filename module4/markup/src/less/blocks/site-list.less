@@ -1,0 +1,54 @@
+.site-list {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  flex-direction: row;
+  display: block;
+
+  &__item {
+    margin-right: 1.5%;
+  }
+
+  &__item a {
+    text-decoration: none;
+    font-family: 'Libre Baskerville';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    color: @black;
+    position: relative;
+    display: block;
+    padding: 12px 20vw;
+    padding-bottom: 13px;
+    background-color: #b6b6b6;
+    border-top: 1px solid #7a7a7a;
+    border-bottom: 1px solid #3f3f3f;
+  }
+
+  &__item--active a {
+    font-weight: 700;
+  }
+
+  @media (min-width: @tablet-width) {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: right;
+
+    &__item a {
+      position: static;
+      padding: 12px 10px;
+      font-size: 18px;
+      line-height: 24px;
+      text-decoration: none;
+      background-color: transparent;
+      border: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-content: left;
+  }
+}

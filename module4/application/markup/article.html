@@ -1,0 +1,86 @@
+<!doctype html>
+<html class="page" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Article</title>
+  <script defer="defer" src="main.js"></script>
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body class="page__body">
+  <header class="page-header"><a class="logo" href="./index.html"><img class="logo__img" src="assets/logo.svg"
+        width="178" height="57" alt="Логотип Nuntium"></a>
+    <nav class="main-nav page-header__main-nav main-nav--closed"><button class="button main-nav__toggle"
+        type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <ul class="site-list main-nav__list">
+        <li class="site-list__item"><a href="./index.html">Home</a></li>
+        <li class="site-list__item"><a href="./blog.html">Blog</a></li>
+        <li class="site-list__item"><a href="./about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="page-main">
+    <section class="article-detail">
+      <h1 class="visually-hidden">Full info about article</h1>
+      <div class="article-detail__banner">
+        <picture>
+          <source media="(min-width: 1366px)" srcset="assets/Article-top-Image(desktop).jpg">
+          <source media="(min-width: 768px)" srcset="assets/Article-top-Image(tablet).jpg"><img
+            class="article-detail__img" src="assets/Article-top-Image(mobile).jpg" alt="Article banner image">
+        </picture>
+      </div>
+      <div class="article-detail__info">
+        <h2 class="article-detail__header">The World’s Most Dangerous Technology Ever Made.</h2><small
+          class="article-detail__brief-inform">Ralph Hawkins &#8226; <time datetime="2019-05-07">May 7, 2019</time>(10
+          mins read)<br></small><small class="article-detail__tag">#technology #tech #career</small>
+        <p class="article-detail__text article-detail__text--first">Commodo labore ut nisi laborum amet eu qui magna
+          ullamco ut labore. Aliquip consectetur labore consectetur dolor exercitation est minim quis. Magna non irure
+          qui ex est laborum nulla excepteur qui. Anim Lorem dolore cupidatat pariatur ex tempor. Duis ea excepteur
+          proident ex commodo irure est.</p>
+        <p class="article-detail__text">Nisi commodo qui pariatur enim sint laborum consequat enim in officia. Officia
+          fugiat incididunt commodo et mollit aliqua non aute. Enim dolor eiusmod aliqua amet ipsum in enim eiusmod.
+          Quis exercitation sit velit duis.</p>
+        <p class="article-detail__text">Est Lorem labore consectetur minim sit eu eiusmod mollit velit. Consectetur
+          voluptate ex amet id eiusmod laborum irure. Aliquip ad qui id exercitation irure amet commodo nisi quis.
+          Occaecat minim incididunt eiusmod nostrud veniam quis culpa.<br>Nisi ipsum et consequat id deserunt excepteur.
+          Cillum non pariatur culpa ut occaecat laboris eu. Ullamco ad Lorem et elit laboris eu qui irure nulla qui
+          culpa et. Cupidatat sunt ipsum proident aute exercitation do tempor aliqua cupidatat quis non exercitation.
+          Adipisicing do minim dolore nulla mollit. Adipisicing incididunt irure ipsum et in esse ipsum elit tempor.</p>
+        <p class="article-detail__text">Aliquip mollit sunt qui irure. Irure ullamco Lorem excepteur dolor qui ea ad
+          quis. Enim fugiat cillum enim ad occaecat sint qui elit labore mollit sunt laborum fugiat consequat. Voluptate
+          labore sunt duis eu deserunt. Occaecat do ut ut labore cillum enim dolore ad enim enim id. Aliquip do veniam
+          ad excepteur ad cillum qui deserunt nostrud sunt aliqua duis sunt occaecat. Laborum incididunt commodo ullamco
+          proident quis.</p>
+      </div>
+      <div class="article-detail__author author">
+        <h2 class="author__header">ABOUT THE AUTHOR</h2>
+        <div class="author__wrap">
+          <div class="author__avatar">
+            <picture>
+              <source media="(min-width: 768px)" srcset="assets/Profile-Picture.png"><img class="author__img"
+                src="assets/Profile-Picture(mobile).png" alt="Auhor avatar">
+            </picture>
+          </div>
+          <div class="author__info">
+            <p class="author__name">Arthur Black</p><small class="author__email">@arthurblack</small>
+          </div>
+          <p class="author__text">Ipsum adipisicing culpa est nisi consequat ex amet magna culpa veniam tempor irure ea.
+            Reprehenderit labore do tempor eiusmod in consectetur ex sunt id mollit commodo ipsum deserunt quis.</p>
+        </div>
+      </div>
+    </section>
+    <div class="article-slider article-slider__wrap"><span
+        class="article-slider__btn-text article-slider__back-btn-text">Go back: <b>Boom boom pow is et
+          Letstrade.</b></span> <button class="button article-slider__button article-slider__button-back"
+        type="button"><img src="assets/Back-Button.svg" alt="back button"></button> <span
+        class="article-slider__btn-text article-slider__next-btn-text">Next up: <b>Lorem ipsum so Ceat Riak.</b></span>
+      <button class="button article-slider__button article-slider__button-next" type="button"><img
+          src="assets/Next-Button.svg" alt="next button"></button>
+    </div>
+  </main>
+</body>
+
+</html>

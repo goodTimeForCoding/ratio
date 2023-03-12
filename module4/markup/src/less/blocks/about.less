@@ -1,0 +1,62 @@
+.about {
+  &__header {
+    margin: 0;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Libre Baskerville';
+    font-weight: 700;
+    font-size: 24px;
+    color: @black;
+  }
+
+  &__text {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: @black;
+  }
+
+  &__img-wrap {
+    text-align: center;
+  }
+
+  &__text--last {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    &__text {
+      margin: 38px 0;
+      line-height: 28px;
+    }
+
+    &__text--first {
+      margin-top: 0;
+    }
+
+    &__wrap {
+      max-width: 672px;
+      margin: 0 auto;
+    }
+
+    &__img-wrap {
+      float: right;
+      margin: 0 0 26px 18px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &__wrap {
+      max-width: 856px;
+    }
+
+    &__header {
+      font-size: 42px;
+    }
+
+    &__text {
+      font-size: 16px;
+    }
+  }
+}

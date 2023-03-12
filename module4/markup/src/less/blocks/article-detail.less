@@ -1,0 +1,126 @@
+.article-detail {
+  &__img {
+    width: 84.4vw;
+    height: 62.5vw;
+  }
+
+  &__banner {
+    text-align: center;
+  }
+
+  &__header {
+    margin: 0;
+    margin-top: 28px;
+    margin-bottom: 18px;
+    text-align: center;
+    font-family: 'Libre Baskerville';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  &__brief-inform {
+    display: none;
+  }
+
+  &__tag {
+    display: none;
+  }
+
+  &__text {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 25px 0;
+  }
+
+  &__author {
+    margin: 30px 0;
+  }
+
+  @media (min-width: @tablet-width) {
+
+    &__info {
+      max-width: 672px;
+      margin: 0 auto;
+    }
+
+    &__img {
+      width: 93.49vw;
+      height: 90.1vw;
+    }
+
+    &__header {
+      margin-top: 25px;
+      margin-bottom: 8px;
+    }
+
+    &__text {
+      margin: 30px 0;
+    }
+
+    &__text--first {
+      margin: 0;
+      margin-top: 8px;
+    }
+
+    &__brief-inform {
+      display: block;
+      margin-bottom: 8px;
+      text-align: center;
+      font-family: 'Open Sans';
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 22px;
+      color: fade(@lightblack, 50%);
+    }
+
+    &__tag {
+      display: block;
+      text-align: center;
+      font-family: 'Open Sans';
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 22px;
+      color: fade(@lightblack, 50%);
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+
+    &__info {
+      max-width: 790px;
+    }
+
+    &__img {
+      width: 96.34vw;
+      height: 43.34vw;
+    }
+
+    &__header {
+      margin-top: 54px;
+      margin-bottom: 17px;
+      font-size: 42px;
+      line-height: 52px;
+    }
+
+    &__brief-inform {
+      margin-bottom: 13px;
+      font-size: 16px;
+    }
+
+    &__tag {
+      font-size: 16px;
+    }
+
+    &__text {
+      margin: 30px 0;
+      font-size: 16px;
+    }
+
+    &__text--first {
+      margin-top: 26px;
+    }
+  }
+}

@@ -23,7 +23,6 @@ const ClearСlock = () => {
   document.userData.stopwatch.value = readout;
 }
 
-
 const StartTIME = () => {
   let cdateObj = new Date();
   let t = (cdateObj.getTime() - dateObj.getTime()) - (s * 1000);
@@ -86,7 +85,6 @@ const StartTIME = () => {
   document.userData.stopwatch.value = readout;
   clocktimer = setTimeout(() => StartTIME(), 1);
 }
-
 
 const StartStop = () => {
   if (init == 0) {
