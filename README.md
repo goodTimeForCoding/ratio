@@ -125,12 +125,12 @@ safely but not be afraid of being stolen by others.`
 2. Запись значений в таблицу рекордов POST `/api/v1/record/`
 
 ## Применённые технологии:
-HTML5
-CSS3
-JavaScript
-NodeJS
-MySQL
-webpack
+-HTML5
+-CSS3
+-JavaScript
+-NodeJS
+-MySQL
+-webpack
 
 ## Для запуска проекта:
 
@@ -156,32 +156,36 @@ webpack
 ## Техническое задание
 
 Требуется сверстать сайт и интегрировать его с API. 
+
 Дизайн [https://www.figma.com/...](https://www.figma.com/file/m3Yaix0uv9W5JE7M0JQvKR/Ratio-Module-2?node-id=0%3A1&t=d3Trk6fxz4jx8cfI-0). 
+
 Документация API [https://panfilovacademy.notion.site/...](https://panfilovacademy.notion.site/API-a418c2dfd668442394ecaa082d8fdfad)
 
 ## Применённые технологии:
-HTML5
-CSS3
-LESS
-JavaScript
-webpack
+-HTML5
+-CSS3
+-LESS
+-JavaScript
+-webpack
 
 ## Для запуска проекта:
 
 Проект разрабатывался в два этапа:
 
-###1) Вёрстка(папка markup)
+### 1) Вёрстка(папка markup)
 Для запуска проекта: 
 - скачиваем репозиторий;
 - устанавливаем необходимые пакеты: *npm install*;
 - запускаем сборку: *npm run build*;
+
 В папке 'markup/dist' будет собранные проект со всеми свёрстанными страницами, на его основе будет строиться приложение.
-###2) Разработка самого приложения(папка application)
+
+### 2) Разработка самого приложения(папка application)
 Для запуска проекта: 
 - скачиваем репозиторий;
 - устанавливаем необходимые пакеты: *npm install*;
-- запускаем сборку бандла: *npm run build* (в папке public будет production версия приложения);
+- запускаем сборку бандла: *npm run build* (в папке 'application/public' будет production версия приложения);
 - запускаем приложение: *npm run start*;
 
-***Ссылка на готовое приложение: [#](#)***
+***Ссылка на готовое приложение: [https://goodtimeforcoding.github.io...](https://goodtimeforcoding.github.io/module4-production/#home)***
 
