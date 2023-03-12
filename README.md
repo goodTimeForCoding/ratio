@@ -125,12 +125,12 @@ safely but not be afraid of being stolen by others.`
 2. Запись значений в таблицу рекордов POST `/api/v1/record/`
 
 ## Применённые технологии:
--HTML5
--CSS3
--JavaScript
--NodeJS
--MySQL
--webpack
+- HTML5
+- CSS3
+- JavaScript
+- NodeJS
+- MySQL
+- webpack
 
 ## Для запуска проекта:
 
@@ -162,11 +162,11 @@ safely but not be afraid of being stolen by others.`
 Документация API [https://panfilovacademy.notion.site/...](https://panfilovacademy.notion.site/API-a418c2dfd668442394ecaa082d8fdfad)
 
 ## Применённые технологии:
--HTML5
--CSS3
--LESS
--JavaScript
--webpack
+- HTML5
+- CSS3
+- LESS
+- JavaScript
+- webpack
 
 ## Для запуска проекта:
 
