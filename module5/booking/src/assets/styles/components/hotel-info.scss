@@ -1,0 +1,121 @@
+.hotel-info {
+  @include flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  &__main {
+    min-width: 750px;
+  }
+
+  &__title-wrap {
+    @include flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 34px;
+    color: $tundora;
+  }
+
+  &__address {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: $dusty-gray;
+  }
+
+  &__properties {
+    margin-top: 53px;
+    @include flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  &__property {
+    @include flex-column-center;
+    justify-content: center;
+    width: 176px;
+    height: 160px;
+    background-color: $athens-gray;
+    border-radius: 8px;
+  }
+
+  &__property-text {
+    margin: 0;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: $tundora;
+  }
+
+  &__icons {
+    @include flex-all-sb;
+    padding-right: 15px;
+    width: 103px;
+  }
+
+  &__shared-icon {
+    left: 5px;
+  }
+
+  &__price-info {
+    width: 382px;
+    padding: 28px 32px;
+    margin-top: 10px;
+    box-shadow: 0px 0px 16px rgba(194, 198, 204, 0.6);
+    border-radius: 10px;
+  }
+
+  &__btn {
+    padding: 20px 104px 20px 104px;
+    margin: 0;
+    margin-top: 27px;
+    width: 324px;
+  }
+
+  &__price {
+    margin: 0;
+    padding-bottom: 25px;
+    border-bottom: 1px solid $iron;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    color: $tundora;
+  }
+
+  @include minitablet {
+    &__title-wrap {
+      justify-content: start;
+      column-gap: 30px;
+    }
+
+    &__main {
+      min-width: auto;
+    }
+
+    &__price-info {
+      margin: 0 auto;
+      width: auto;
+      padding: 20px;
+    }
+
+    &__btn {
+      width: 230px;
+      padding: 20px 40px;
+    }
+  }
+
+  @include minitablet {
+    &__title-wrap {
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.header {
+  padding: 27px 0;
+  background-color: $athens-gray;
+
+  &__container {
+    @include flex-v-center;
+  }
+
+  &__logo {
+    margin-right: 133px;
+    min-width: 108px;
+  }
+
+  @include tablet  {
+    padding: 20px 0;
+
+    &__container {
+      justify-content: space-between;
+    }
+  }
+}

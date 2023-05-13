@@ -1,0 +1,126 @@
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  padding: 0 5.85%;
+}
+
+.btn {
+  font-size: 15px;
+
+  &__app-link {
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+    background: $iron;
+    padding: 18px 29px 18px 65px;
+    text-decoration: none;
+    color: $tundora;
+    border-radius: 6px;
+
+    &:hover,
+    &:focus {
+      background: #c7c7c7;
+    }
+
+    &:active {
+      background: grey;
+    }
+  }
+
+  &__reserv {
+    display: block;
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: 17px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    background: $tundora;
+    padding: 22px 117px 19px 117px;
+    text-decoration: none;
+    color: white;
+    border-radius: 30px;
+    font-size: 16px;
+
+    &:hover,
+    &:focus {
+      background: #262626;
+    }
+
+    &:active {
+      background: black;
+    }
+  }
+
+  &__hotel {
+    display: block;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    background: $tundora;
+    padding: 22px 35px 18px;
+    color: $tundora;
+    text-decoration: none;
+    background: #FFFFFF;
+    border: 1px solid $tundora;
+    border-radius: 6px;
+    font-size: 15px;
+
+    &:hover,
+    &:focus {
+      box-shadow: 5px 5px 5px $tundora;
+    }
+
+    &:active {
+      background: #d9d9d9;
+    }
+  }
+}
+
+
+.title {
+  position: relative;
+  max-width: 400px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  color: $tundora;
+  margin: 0;
+
+  &--decore {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      bottom: -37px;
+      left: 0;
+      width: 140px;
+      height: 6px;
+      background-color: $tundora;
+      border-radius: 3px;
+    }
+  }
+}

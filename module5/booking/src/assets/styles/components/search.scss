@@ -1,0 +1,45 @@
+.search {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 116px;
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 24px;
+    color: $tundora;
+  }
+
+  &__text {
+    margin: 0;
+    margin-top: 213px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    color: $tundora;
+  }
+
+  &__left {
+    padding-left: 82px;
+    margin-top: 84px;
+    margin-bottom: 80px;
+
+    @include minitablet {
+      padding: 0 15px;
+    }
+  }
+
+  &__right {
+    position: relative;
+    width: 670px;
+    height: 755px;
+  }
+
+  &__small-featured-wrap {
+    position: absolute;
+  }
+}

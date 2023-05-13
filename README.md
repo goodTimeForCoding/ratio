@@ -18,7 +18,7 @@
 
 Favicon - является логотип сайта
 
-SEO 
+SEO
 
 - Title - `Warehouse - Save your data storage here.`
 - Description - `Data Warehouse is a data storage area that has been
@@ -27,8 +27,8 @@ safely but not be afraid of being stolen by others.`
 - Keyword - `warehouse, save, data, security, storage, area`
 - OpenGraph - на выбор разработчика.
 
-
 ## Применённые технологии:
+
 - HTML5
 - CSS3
 - CSS-паттерны
@@ -38,25 +38,21 @@ safely but not be afraid of being stolen by others.`
 
 ![warehouse](./module1/img/datawarehouse.jpg)
 
-
-***Ссылка на готовое приложение: [https://goodtimeforcoding.github.io/module1-production/](https://goodtimeforcoding.github.io/module1-production/)***
-
+**_Ссылка на готовое приложение: [https://goodtimeforcoding.github.io/module1-production/](https://goodtimeforcoding.github.io/module1-production/)_**
 
 ---
 
 # Модуль 2
 
-
-
 ## Техническое задание
 
-Нужно реализовать с использованием JavaScript, HTML и CSS игру 2048. 
+Нужно реализовать с использованием JavaScript, HTML и CSS игру 2048.
 
 Пример [https://play2048.co/](https://play2048.co/)
 
 ### Описание интерфейса
 
-1. Интерфейс представляет собой поле 5х5 клеток. 
+1. Интерфейс представляет собой поле 5х5 клеток.
 2. Цвет клеток меняется в зависимости от набранного номинала в клетке.
 3. Интерфейс должен быть адаптивным.
 
@@ -81,8 +77,8 @@ safely but not be afraid of being stolen by others.`
 
 Таблица результатов строится на основе потраченного времени которое потребовалось, чтобы набрать 2048.
 
-
 ## Применённые технологии:
+
 - HTML5
 - CSS3
 - JavaScript
@@ -91,21 +87,19 @@ safely but not be afraid of being stolen by others.`
 ## Для запуска проекта:
 
 - скачиваем репозиторий;
-- устанавливаем необходимые пакеты: *npm install*;
-- запускаем сборку: *npm run build*;
-- запускаем проект: *npm start*;
+- устанавливаем необходимые пакеты: _npm install_;
+- запускаем сборку: _npm run build_;
+- запускаем проект: _npm start_;
 
-
-***Ссылка на готовое приложение: [https://goodtimeforcoding.github.io/module2-production/](https://goodtimeforcoding.github.io/module2-production/)***
+**_Ссылка на готовое приложение: [https://goodtimeforcoding.github.io/module2-production/](https://goodtimeforcoding.github.io/module2-production/)_**
 
 ---
 
 # Модуль 3
 
-
 ## Техническое задание
 
-Нужно реализовать бекенд для игры 2048, сделанной в прошлом модуле. Реализованные методы  нужно интегрировать во фронтенд игры, сделанной на предыдущем модуле.
+Нужно реализовать бекенд для игры 2048, сделанной в прошлом модуле. Реализованные методы нужно интегрировать во фронтенд игры, сделанной на предыдущем модуле.
 
 ### Что требуется сделать?
 
@@ -125,6 +119,7 @@ safely but not be afraid of being stolen by others.`
 2. Запись значений в таблицу рекордов POST `/api/v1/record/`
 
 ## Применённые технологии:
+
 - HTML5
 - CSS3
 - JavaScript
@@ -135,33 +130,36 @@ safely but not be afraid of being stolen by others.`
 ## Для запуска проекта:
 
 ### База данных:
+
 При разработке проекта использовалась БД MySQL (mysql-essential-5.1.53). Для создания необходимых сущностей для работы проекта необходимо открыть и запустить скрипт "ratio.sql" используя MySQL Workbench 5.2 CE
 
 ### FRONTEND:
+
 - скачиваем репозиторий;
-- устанавливаем необходимые пакеты: *npm install*;
-- запускаем сборку: *npm run build*;
-- запускаем проект: *npm start*;
+- устанавливаем необходимые пакеты: _npm install_;
+- запускаем сборку: _npm run build_;
+- запускаем проект: _npm start_;
 
 ### BACKEND:
+
 - скачиваем репозиторий;
-- устанавливаем необходимые пакеты: *npm install*;
-- запускаем проект: *npm start*;
+- устанавливаем необходимые пакеты: _npm install_;
+- запускаем проект: _npm start_;
 
 ---
 
 # Модуль 4
 
-
 ## Техническое задание
 
-Требуется сверстать сайт и интегрировать его с API. 
+Требуется сверстать сайт и интегрировать его с API.
 
-Дизайн [https://www.figma.com/...](https://www.figma.com/file/m3Yaix0uv9W5JE7M0JQvKR/Ratio-Module-2?node-id=0%3A1&t=d3Trk6fxz4jx8cfI-0). 
+Дизайн [https://www.figma.com/...](https://www.figma.com/file/m3Yaix0uv9W5JE7M0JQvKR/Ratio-Module-2?node-id=0%3A1&t=d3Trk6fxz4jx8cfI-0).
 
 Документация API [https://panfilovacademy.notion.site/...](https://panfilovacademy.notion.site/API-a418c2dfd668442394ecaa082d8fdfad)
 
 ## Применённые технологии:
+
 - HTML5
 - CSS3
 - LESS
@@ -173,19 +171,55 @@ safely but not be afraid of being stolen by others.`
 Проект разрабатывался в два этапа:
 
 ### 1) Вёрстка(папка markup)
-Для запуска проекта: 
+
+Для запуска проекта:
+
 - скачиваем репозиторий;
-- устанавливаем необходимые пакеты: *npm install*;
-- запускаем сборку: *npm run build*;
+- устанавливаем необходимые пакеты: _npm install_;
+- запускаем сборку: _npm run build_;
 
 В папке 'markup/dist' будет собранные проект со всеми свёрстанными страницами, на его основе будет строиться приложение.
 
 ### 2) Разработка самого приложения(папка application)
-Для запуска проекта: 
+
+Для запуска проекта:
+
 - скачиваем репозиторий;
-- устанавливаем необходимые пакеты: *npm install*;
-- запускаем сборку бандла: *npm run build* (в папке 'application/public' будет production версия приложения);
-- запускаем приложение: *npm run start*;
+- устанавливаем необходимые пакеты: _npm install_;
+- запускаем сборку бандла: _npm run build_ (в папке 'application/public' будет production версия приложения);
+- запускаем приложение: _npm run start_;
 
-***Ссылка на готовое приложение: [https://goodtimeforcoding.github.io...](https://goodtimeforcoding.github.io/module4-production/#home)***
+**_Ссылка на готовое приложение: [https://goodtimeforcoding.github.io...](https://goodtimeforcoding.github.io/module4-production/#home)_**
 
+---
+
+# Модуль 5
+
+## Техническое задание
+
+Cверстать и интегрировать прототип сайта по бронированию отелей.
+
+Дизайн [https://www.figma.com/...](https://www.figma.com/file/x91a0xTJbjNuIutf2zY7oW/Panfilov.Academy-Frontend-Module-5?type=design&node-id=0-1&t=im8JszWhwZp83ndh-0).
+
+Документация API [https://panfilovacademy.notion.site/...](https://module5.vue.panfilov.academy/api)
+
+## Применённые технологии:
+
+- VUE3
+- Vuex
+- Vue-Router
+- CSS3
+- SASS
+- JavaScript
+- webpack
+- YandexMetrika
+- GoogleMaps
+
+## Для запуска проекта:
+
+- скачиваем репозиторий;
+- устанавливаем необходимые пакеты: _npm install_;
+- запускаем сборку: _npm run build_;
+- запускаем проект: _npm run serve_;
+
+**_Ссылка на готовое приложение: [https://module5-production...](https://module5-production.vercel.app/)_**

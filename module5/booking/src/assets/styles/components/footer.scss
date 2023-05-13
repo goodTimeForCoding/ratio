@@ -1,0 +1,213 @@
+.footer {
+  color: $tundora;
+  background-color: $athens-gray;
+
+  &__form-wrap {
+    background-color: $porcelain;
+    padding: 0 5.85%;
+  }
+
+  &__main {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 48px;
+    row-gap: 60px;
+    padding: 82px 5.85% 196px;
+  }
+
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    width: 382px;
+  }
+
+  &__logo {
+    width: 151px;
+    margin-bottom: 34px;
+  }
+
+  &__descr {
+    margin: 0 0 46px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px;
+    color: $dusty-gray;
+    max-width: 382px;
+  }
+
+  &__store-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 17px;
+  }
+
+  &__playstore:before {
+    content: "";
+    position: absolute;
+    left: 29px;
+    top: 15px;
+    width: 22px;
+    height: 22px;
+    background-image: url("~@/assets/images/playstore.svg");
+    background-size: 22px 22px;
+  }
+
+  &__appstore {
+    padding-left: 60px;
+    padding-right: 27px;
+  }
+
+  &__appstore:before {
+    content: "";
+    position: absolute;
+    left: 25px;
+    top: 16px;
+    width: 24px;
+    height: 24px;
+    background-image: url("~@/assets/images/appstore.svg");
+    background-size: 24px 24px;
+  }
+
+  &__about {
+    width: 153px;
+  }
+
+  &__item {
+    margin-bottom: 14px;
+    cursor: pointer;
+
+    &--socials {
+      margin-top: 35px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 28px;
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: 15px;
+    color: $tundora;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: black;
+    }
+  }
+
+  &__help {
+    width: 153px;
+  }
+
+  &__contact {
+    margin-left: 10px;
+    width: 303px;
+  }
+
+  &__socials {
+    display: flex;
+  }
+
+  &__bottom {
+    padding: 40px 5.85% 42px;
+    border-top: 1px solid $iron;
+  }
+
+  &__bottom-wrap {
+    @include flex-all-sb;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  &__copyright-text {
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  @include minidesk {
+    &__main {
+      justify-content: space-between;
+      column-gap: 20px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    &__info {
+      width: 260px;
+    }
+
+    &__about {
+      width: auto;
+    }
+
+    &__help {
+      width: auto;
+    }
+
+    &__contact {
+      width: 270px;
+    }
+
+    &__contact {
+      margin-left: 0px;
+    }
+
+    &__playstore {
+      margin-right: 0px;
+      width: 175px;
+    }
+
+    &__appstore {
+      width: 175px;
+    }
+  }
+
+  @include tablet {
+    &__main {
+      column-gap: 35px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &__info {
+      width: 380px;
+    }
+  }
+
+  @include minitablet {
+    &__main {
+      column-gap: 15px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &__info {
+      display: block;
+      width: auto;
+      min-width: 260px;
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    &__about {
+      width: 135px;
+    }
+
+    &__contact {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    &__copyright-text {
+      font-size: 11px;
+    }
+  }
+}

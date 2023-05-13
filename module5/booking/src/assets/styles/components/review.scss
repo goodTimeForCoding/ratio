@@ -1,0 +1,39 @@
+.review {
+  &__avatar {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+  }
+
+  &__avatar-wrap {
+    margin-right: 17px;
+  }
+
+  &__author {
+    @include flex-v-center;
+    margin-bottom: 15px;
+  }
+
+  &__author-name {
+    margin: 0;
+    font-weight: 700;
+    font-size: 16px;
+    color: $tundora;
+  }
+
+  &__date {
+    margin: 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 26px;
+    color: $dusty-gray;
+  }
+
+  &__text {
+    margin: 0;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: $dusty-gray;
+  }
+}
