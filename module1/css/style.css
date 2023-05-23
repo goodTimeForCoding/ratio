@@ -85,9 +85,10 @@ body {
 .menu-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
+  margin-top: 68px;
   display: flex;
   align-items: center;
-  height: 150px;
+
 }
 
 .header-logo-wrap {
@@ -576,10 +577,6 @@ body {
 }
 
 @media screen and (max-width: 1199px) {
-  .menu-wrap {
-    height: 100px;
-  }
-
   .intro-img {
     left: -330px;
   }
