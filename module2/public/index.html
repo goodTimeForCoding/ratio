@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>2048</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="title">2048</h1>
+    <p class="score-title">Score <span class="score">0</span></p>
+    <div class="status"></div>
+    <form class="user-data" method="post" name="userData" autocomplete="off">
+      <div class="form">
+        <div class="player-name-wrap"><input class="player-name" type="text" id="player-name" name="player-name"
+            size="20" placeholder="введите имя" required></div>
+        <div class="timer-wrap"><input class="timer" name="stopwatch" size="8" value="00:00:00.00" disabled></div>
+      </div>
+      <div class="start-btn">
+        <button type="button" class="btn" id="start-game">Начать игру</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="grid"></div>
+
+  <div class="container">
+    <p class="results-title">Список результатов:</p>
+    <div class="results"></div>
+  </div>
+
+  <template id="results-template">
+    <div class="result">
+      <div class="player"></div>
+      <div class="time"></div>
+    </div>
+  </template>
+  <script src="./main.bundle.js"></script>
+</body>
+
+</html>

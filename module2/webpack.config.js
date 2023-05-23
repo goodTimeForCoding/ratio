@@ -1,10 +1,20 @@
-const path = require('path');
+const path = require("path");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-	entry: './js/board.js', //точка входа
-	devtool: 'source-map', //генерация карт исходников, для нормальной работы с кодом в браузере после сборки, то есть строит соответствие каждой строки в бандле с исходным кодом
-	output: {    //точка выхода
-		filename: 'main.bundle.js', //имя выходного файла
-		path: path.resolve(__dirname, ''), //куда складываем файл(__dirname - сохраняет путь в корень рабочего проекта, второй параметр для указания подпапок), path - пакет который имеет метод resolve
-	},
+  entry: "./js/board.js",
+  devtool: "source-map",
+  output: {
+    filename: "main.bundle.js",
+    path: path.resolve(__dirname, "dist"),
+  },
+
+  plugins: [
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: "public/index.html", to: "" },
+        { from: "css", to: "css" },
+      ],
+    }),
+  ],
 };

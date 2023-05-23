@@ -1,23 +1,23 @@
-let base = 60;
-let clocktimer, dateObj, dh, dm, ds;
+const base = 60;
 let readout = '';
-let h = 1,
-  m = 1,
-  tm = 1,
-  s = 0,
-  ts = 0,
-  ms = 0,
+let clocktimer, dateObj, diffHour, diffMinute, diffSecond;
+let hour = 1,
+  minute = 1,
+  fullMinute = 1,
+  second = 0,
+  fullSecond = 0,
+  milliSecond = 0,
   init = 0;
 
 
 const ClearСlock = () => {
   clearTimeout(clocktimer);
-  h = 1;
-  m = 1;
-  tm = 1;
-  s = 0;
-  ts = 0;
-  ms = 0;
+  hour = 1;
+  minute = 1;
+  fullMinute = 1;
+  second = 0;
+  fullSecond = 0;
+  milliSecond = 0;
   init = 0;
   readout = '00:00:00.00';
   document.userData.stopwatch.value = readout;
@@ -25,63 +25,63 @@ const ClearСlock = () => {
 
 const StartTIME = () => {
   let cdateObj = new Date();
-  let t = (cdateObj.getTime() - dateObj.getTime()) - (s * 1000);
-  if (t > 999) {
-    s++;
+  let time = (cdateObj.getTime() - dateObj.getTime()) - (second * 1000);
+  if (time > 999) {
+    second++;
   }
-  if (s >= (m * base)) {
-    ts = 0;
-    m++;
+  if (second >= (minute * base)) {
+    fullSecond = 0;
+    minute++;
   } else {
-    ts = parseInt((ms / 100) + s);
-    if (ts >= base) {
-      ts = ts - ((m - 1) * base);
+    fullSecond = parseInt((milliSecond / 100) + second);
+    if (fullSecond >= base) {
+      fullSecond = fullSecond - ((minute - 1) * base);
     }
   }
-  if (m > (h * base)) {
-    tm = 1;
-    h++;
+  if (minute > (hour * base)) {
+    fullMinute = 1;
+    hour++;
   } else {
-    tm = parseInt((ms / 100) + m);
-    if (tm >= base) {
-      tm = tm - ((h - 1) * base);
+    fullMinute = parseInt((milliSecond / 100) + minute);
+    if (fullMinute >= base) {
+      fullMinute = fullMinute - ((hour - 1) * base);
     }
   }
-  ms = Math.round(t / 10);
-  if (ms > 99) {
-    ms = 0;
+  milliSecond = Math.round(time / 10);
+  if (milliSecond > 99) {
+    milliSecond = 0;
   }
-  if (ms == 0) {
-    ms = '00';
+  if (milliSecond == 0) {
+    milliSecond = '00';
   }
-  if (ms > 0 && ms <= 9) {
-    ms = '0' + ms;
+  if (milliSecond > 0 && milliSecond <= 9) {
+    milliSecond = '0' + milliSecond;
   }
-  if (ts > 0) {
-    ds = ts;
-    if (ts < 10) {
-      ds = '0' + ts;
+  if (fullSecond > 0) {
+    diffSecond = fullSecond;
+    if (fullSecond < 10) {
+      diffSecond = '0' + fullSecond;
     }
   } else {
-    ds = '00';
+    diffSecond = '00';
   }
-  dm = tm - 1;
-  if (dm > 0) {
-    if (dm < 10) {
-      dm = '0' + dm;
+  diffMinute = fullMinute - 1;
+  if (diffMinute > 0) {
+    if (diffMinute < 10) {
+      diffMinute = '0' + diffMinute;
     }
   } else {
-    dm = '00';
+    diffMinute = '00';
   }
-  dh = h - 1;
-  if (dh > 0) {
-    if (dh < 10) {
-      dh = '0' + dh;
+  diffHour = hour - 1;
+  if (diffHour > 0) {
+    if (diffHour < 10) {
+      diffHour = '0' + diffHour;
     }
   } else {
-    dh = '00';
+    diffHour = '00';
   }
-  readout = dh + ':' + dm + ':' + ds + '.' + ms;
+  readout = diffHour + ':' + diffMinute + ':' + diffSecond + '.' + milliSecond;
   document.userData.stopwatch.value = readout;
   clocktimer = setTimeout(() => StartTIME(), 1);
 }
