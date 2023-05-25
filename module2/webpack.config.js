@@ -6,13 +6,12 @@ module.exports = {
   devtool: "source-map",
   output: {
     filename: "main.bundle.js",
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "public"),
   },
 
   plugins: [
     new CopyWebpackPlugin({
       patterns: [
-        { from: "public/index.html", to: "" },
         { from: "css", to: "css" },
       ],
     }),
