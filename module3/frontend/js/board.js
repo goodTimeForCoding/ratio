@@ -1,4 +1,4 @@
-import {equalArrays} from './util.js';
+import {equalArrays, showAlert} from './util.js';
 import {StartStop, Start} from './timer.js';
 import {getData, setPlayer} from './fetch';
 import {addPlayers} from './players';
@@ -29,7 +29,7 @@ const startGame = () => {
     Start();
     startGameBtn.textContent = `Начать заново`;
   } else {
-    alert('Введите имя!');
+    showAlert('Введите имя!');
   }
 }
 

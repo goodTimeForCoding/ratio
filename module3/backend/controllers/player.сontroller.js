@@ -2,7 +2,6 @@ const Player = require("../models/player.model.js");
 
 //создаём и сохраняем нового игрока
 exports.addPlayer = function (request, response) {
-  console.log("НАЧАЛИ ДОБАВЛЯТЬ ИГРОКА");
   console.log(request.body);
   //валидизируем запрос
   if (!request.body) {
