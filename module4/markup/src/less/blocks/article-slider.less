@@ -16,10 +16,20 @@
 
   &__button-next {
     right: -25px;
+    background-image: url('../../img/Next-Button.svg');
+  }
+
+  &__button-next:hover {
+    box-shadow: -2px -2px 5px 3px rgba(0, 0, 0, 0.75);
   }
 
   &__button-back {
     left: -25px;
+    background-image: url('../../img/Back-Button.svg');
+  }
+
+  &__button-back:hover {
+    box-shadow: 2px -2px 5px 3px rgba(0, 0, 0, 0.75);
   }
 
   &__btn-text {
@@ -36,6 +46,11 @@
       font-size: 12px;
     }
 
+    &__btn-text:hover,
+    &__btn-text:focus {
+      text-decoration: underline;
+    }
+
     &__back-btn-text {
       margin-left: 33px;
     }
@@ -43,11 +58,18 @@
     &__next-btn-text {
       margin-right: 33px;
     }
+
+    &__link {
+      text-decoration: none;
+      display: block;
+      color: @black;
+      align-self: center;
+    }
   }
 
   @media (min-width: @desktop-width) {
     &__btn-text {
-      font-size: 20px;
+      font-size: 15px;
     }
   }
 }

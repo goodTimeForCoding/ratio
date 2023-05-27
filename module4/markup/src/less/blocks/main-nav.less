@@ -27,7 +27,7 @@
 
     &:hover,
     &:active {
-      background-color: fade(black, 20%);
+      background-color: fade(@black, 20%);
     }
 
     @media (min-width: @tablet-width) {
@@ -42,15 +42,15 @@
     left: 6px;
     width: 36px;
     height: 4px;
-    background-color: fade(black, 54%);
-    box-shadow: 0 10px 0 0 fade(black, 54%), 0 20px 0 0 fade(black, 54%);
+    background-color: fade(@black, 54%);
+    box-shadow: 0 10px 0 0 fade(@black, 54%), 0 20px 0 0 fade(@black, 54%);
   }
 
   &__toggle:active::before {
-    background-color: fade(black, 30%);
+    background-color: fade(@black, 30%);
     box-shadow:
-      0 10px 0 0 fade(black, 30%),
-      0 20px 0 0 fade(black, 30%);
+      0 10px 0 0 fade(@black, 30%),
+      0 20px 0 0 fade(@black, 30%);
   }
 
   &--closed &__list {
@@ -96,7 +96,7 @@
       left: 6px;
       width: 36px;
       height: 4px;
-      background-color: fade(black, 54%);
+      background-color: fade(@black, 54%);
     }
 
     /*поворачиваем одну из полосок на 45, другую на -45*/
@@ -111,7 +111,7 @@
 
     &:active::before,
     &:active::after {
-      background-color: fade(black, 30%);
+      background-color: fade(@black, 30%);
     }
   }
 }

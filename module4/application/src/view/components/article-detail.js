@@ -1,6 +1,6 @@
 import {convertSecToDate, convertSecToNewDate} from '../../utils/utils.js';
 
-export const createArticleTemplate = (data) => {
+export const createArticleTemplate = (data, prevData, nextData) => {
 
   const {author, createdAt, description, nextId, prevId, readTime, title, tag} = data;
   const {name, about, nick} = author;
@@ -39,18 +39,16 @@ export const createArticleTemplate = (data) => {
   </section>
   <div class="article-slider article-slider__wrap">
     <a class="article-slider__link" href="#article/${prevItem}">
-      <span class="article-slider__btn-text article-slider__back-btn-text">Go back: <b>Boom boom pow is et Letstrade.</b></span>
+      <span class="article-slider__btn-text article-slider__back-btn-text">Go back: <b>${prevData}</b></span>
     </a>
     <form action="#article/${prevItem}" style="position:absolute">
-      <button class="button article-slider__button article-slider__button-back"
-      type="submit"><img src="assets/Back-Button.svg" alt="back button"></button>
+      <button class="button article-slider__button article-slider__button-back" type="submit"></button>
     </form>
     <a class="article-slider__link" href="#article/${nextItem}">
-      <span class="article-slider__btn-text article-slider__next-btn-text">Next up: <b>Lorem ipsum so Ceat Riak.</b></span>
+      <span class="article-slider__btn-text article-slider__next-btn-text">Next up: <b>${nextData}</b></span>
     </a>
     <form action="#article/${nextItem}" style="position:absolute; right:0px">
-      <button class="button article-slider__button article-slider__button-next" type="submit"><img
-      src="assets/Next-Button.svg" alt="next button"></button>
+      <button class="button article-slider__button article-slider__button-next" type="submit"></button>
     </form>
   </div>`;
 };

@@ -14,22 +14,35 @@
 
   &__item a {
     text-decoration: none;
+    cursor: default;
     font-family: 'Libre Baskerville';
     font-weight: 400;
     font-size: 20px;
     line-height: 25px;
-    color: @black;
+    color: @woodsmoke;
     position: relative;
     display: block;
     padding: 12px 20vw;
     padding-bottom: 13px;
-    background-color: #b6b6b6;
-    border-top: 1px solid #7a7a7a;
-    border-bottom: 1px solid #3f3f3f;
+    background-color: @nobel;
+    border-top: 1px solid @boulder;
+    border-bottom: 1px solid @shaft;
   }
 
   &__item--active a {
     font-weight: 700;
+  }
+
+  &__item a:hover,
+  &__item a:focus {
+    color: @alto;
+    transition: color 0.2s ease;
+  }
+
+  &__item--active a:hover,
+  &__item--active a:focus {
+    color: @woodsmoke;
+    transition: none;
   }
 
   @media (min-width: @tablet-width) {

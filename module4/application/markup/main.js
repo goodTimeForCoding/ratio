@@ -1,12 +1,2 @@
-const navMain = document.querySelector('.main-nav');
-const navToggle = navMain.querySelector('.main-nav__toggle');
-
-navToggle.addEventListener('click', () => {
-  if (navMain.classList.contains('main-nav--closed')) {
-    navMain.classList.remove('main-nav--closed');
-    navMain.classList.add('main-nav--opened');
-  } else {
-    navMain.classList.add('main-nav--closed');
-    navMain.classList.remove('main-nav--opened');
-  }
-});
+!function(){"use strict";var n=document.querySelector(".main-nav");n.querySelector(".main-nav__toggle").addEventListener("click",(function(){n.classList.contains("main-nav--closed")?(n.classList.remove("main-nav--closed"),n.classList.add("main-nav--opened")):(n.classList.add("main-nav--closed"),n.classList.remove("main-nav--opened"))}))}();
+//# sourceMappingURL=main.js.map

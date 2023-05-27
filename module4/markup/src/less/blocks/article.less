@@ -10,6 +10,7 @@
     text-decoration: none;
   }
 
+
   &__header {
     margin: 0;
     padding: 0;
@@ -18,7 +19,13 @@
     font-weight: 700;
     font-size: 18px;
     line-height: 22px;
-    color: @black;
+    color: @woodsmoke;
+  }
+
+  &__header:hover,
+  &__header:focus {
+    color: @alto;
+    transition: color 0.2s ease;
   }
 
   &__tag {

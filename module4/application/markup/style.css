@@ -109,6 +109,7 @@ img {
 .site-list__item a {
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: default;
   font-family: 'Libre Baskerville';
   font-weight: 400;
   font-size: 20px;
@@ -124,6 +125,18 @@ img {
 }
 .site-list__item--active a {
   font-weight: 700;
+}
+.site-list__item a:hover,
+.site-list__item a:focus {
+  color: #dedede;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+.site-list__item--active a:hover,
+.site-list__item--active a:focus {
+  color: #111111;
+  -webkit-transition: none;
+  transition: none;
 }
 @media (min-width: 768px) {
   .site-list {
@@ -299,6 +312,12 @@ img {
   font-size: 18px;
   line-height: 22px;
   color: #111111;
+}
+.article__header:hover,
+.article__header:focus {
+  color: #dedede;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
 }
 .article__tag {
   margin: 0;
@@ -773,9 +792,19 @@ img {
 }
 .article-slider__button-next {
   right: -25px;
+  background-image: url(assets/Next-Button.svg);
+}
+.article-slider__button-next:hover {
+  -webkit-box-shadow: -2px -2px 5px 3px rgba(0, 0, 0, 0.75);
+          box-shadow: -2px -2px 5px 3px rgba(0, 0, 0, 0.75);
 }
 .article-slider__button-back {
   left: -25px;
+  background-image: url(assets/Back-Button.svg);
+}
+.article-slider__button-back:hover {
+  -webkit-box-shadow: 2px -2px 5px 3px rgba(0, 0, 0, 0.75);
+          box-shadow: 2px -2px 5px 3px rgba(0, 0, 0, 0.75);
 }
 .article-slider__btn-text {
   display: none;
@@ -790,16 +819,29 @@ img {
     font-weight: 400;
     font-size: 12px;
   }
+  .article-slider__btn-text:hover,
+  .article-slider__btn-text:focus {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+  }
   .article-slider__back-btn-text {
     margin-left: 33px;
   }
   .article-slider__next-btn-text {
     margin-right: 33px;
   }
+  .article-slider__link {
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    display: block;
+    color: #000000;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
 }
 @media (min-width: 1366px) {
   .article-slider__btn-text {
-    font-size: 20px;
+    font-size: 15px;
   }
 }
 
