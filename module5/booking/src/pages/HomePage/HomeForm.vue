@@ -66,7 +66,7 @@ import IconBase from "@/components/icons/IconBase.vue";
 import IconSearch from "@/components/icons/IconSearch.vue";
 import { useVuelidate } from "@vuelidate/core";
 import { required } from "@vuelidate/validators";
-import { mapState, mapGetters, mapActions, mapMutations } from "vuex";
+import { mapGetters, mapActions } from "vuex";
 
 export default {
   setup() {

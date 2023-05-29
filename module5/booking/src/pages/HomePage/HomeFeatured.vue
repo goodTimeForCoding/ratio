@@ -18,7 +18,6 @@
 
 <script>
 import HotelCard from "@/components/HotelCard.vue";
-import { mapState, mapGetters, mapActions, mapMutations } from "vuex";
 
 export default {
   props: {

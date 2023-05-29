@@ -25,7 +25,7 @@
 <script>
 import HotelCard from "@/components/HotelCard.vue";
 import ComponentWithMapNew from "@/components/common/ComponentWithMapNew.vue";
-import { mapState, mapGetters, mapActions, mapMutations } from "vuex";
+import { mapState, mapGetters } from "vuex";
 
 export default {
   components: {

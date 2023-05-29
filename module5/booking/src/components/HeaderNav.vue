@@ -18,7 +18,12 @@
 </template>
 
 <script>
-import { headerLinks } from "@/constants/pageLinks";
+const headerLinks = [
+  { name: "Find a Property", path: "/property" },
+  { name: "Share Stories", path: "/stories" },
+  { name: "Rental Guides", path: "/guides" },
+  { name: "Download Mobile App", path: "/app" },
+];
 export default {
   data() {
     return {

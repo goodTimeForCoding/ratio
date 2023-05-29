@@ -66,7 +66,7 @@
 <script>
 import { useVuelidate } from "@vuelidate/core";
 import { required, email } from "@vuelidate/validators";
-import { mapState, mapGetters, mapActions, mapMutations } from "vuex";
+import { mapGetters } from "vuex";
 import axios from "axios";
 import { useToast } from "vue-toastification";
 

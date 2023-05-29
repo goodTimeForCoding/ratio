@@ -29,7 +29,7 @@ import HomeHero from "@/pages/HomePage/HomeHero.vue";
 import HomeLatest from "@/pages/HomePage/HomeLatest.vue";
 import HomeBanner from "@/pages/HomePage/HomeBanner.vue";
 import HomeFeatured from "@/pages/HomePage/HomeFeatured.vue";
-import { mapState, mapGetters, mapActions, mapMutations } from "vuex";
+import { mapState, mapGetters, mapActions } from "vuex";
 
 export default {
   components: {

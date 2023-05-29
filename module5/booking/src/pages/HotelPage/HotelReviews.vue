@@ -69,7 +69,7 @@ import IconBase from "@/components/icons/IconBase.vue";
 import IconStar from "@/components/icons/IconStar.vue";
 import IconScale from "@/components/icons/IconScale.vue";
 import HotelReviewsList from "@/pages/HotelPage/HotelReviewsList.vue";
-import { mapState, mapGetters, mapActions, mapMutations } from "vuex";
+import { mapState } from "vuex";
 export default {
   components: {
     IconBase,

@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { mapState, mapGetters, mapActions, mapMutations } from "vuex";
+import { mapState, mapMutations } from "vuex";
 import HotelAmenitiesList from "@/pages/HotelPage/HotelAmenitiesList.vue";
 export default {
   components: {

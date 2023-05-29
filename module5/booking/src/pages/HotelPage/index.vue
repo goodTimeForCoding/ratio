@@ -38,7 +38,7 @@ import HotelReviews from "@/pages/HotelPage/HotelReviews.vue";
 import HotelInfo from "@/pages/HotelPage/HotelInfo.vue";
 import HotelDescr from "@/pages/HotelPage/HotelDescr.vue";
 import ComponentWithMap from "@/components/common/ComponentWithMap.vue";
-import { mapState, mapGetters, mapActions, mapMutations } from "vuex";
+import { mapState, mapGetters, mapActions } from "vuex";
 
 export default {
   components: {

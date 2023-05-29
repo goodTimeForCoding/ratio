@@ -126,7 +126,21 @@ import IconLinkedin from "@/components/icons/IconLinkedin.vue";
 import IconTwitter from "@/components/icons/IconTwitter.vue";
 import FooterForm from "@/components/FooterForm.vue";
 import IconLogoBig from "@/components/icons/IconLogoBig.vue";
-import { companyLinks, helpLinks } from "@/constants/pageLinks";
+
+const companyLinks = [
+  { name: "About Us", path: "/about" },
+  { name: "Legal Information", path: "/information" },
+  { name: "Contact Us", path: "/contacts" },
+  { name: "Blogs", path: "/blogs" },
+];
+
+const helpLinks = [
+  { name: "Find a Property", path: "/property" },
+  { name: "How To Host?", path: "/how-to-host" },
+  { name: "Why Us? ", path: "/why-us" },
+  { name: "FAQs", path: "/faqs" },
+  { name: "Rental Guides", path: "/guides" },
+];
 
 export default {
   data() {

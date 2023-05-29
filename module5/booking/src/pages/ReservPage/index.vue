@@ -19,7 +19,7 @@
 <script>
 import ReservForm from "@/pages/ReservPage/ReservForm.vue";
 import ReservCard from "@/pages/ReservPage/ReservCard.vue";
-import { mapState, mapGetters, mapActions, mapMutations } from "vuex";
+import { mapState } from "vuex";
 
 export default {
   components: {

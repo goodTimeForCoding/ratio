@@ -28,7 +28,7 @@
 <script>
 import IconBase from "@/components/icons/IconBase.vue";
 import IconLike from "@/components/icons/IconLike.vue";
-import { mapState, mapGetters, mapActions, mapMutations } from "vuex";
+import { mapGetters } from "vuex";
 
 export default {
   components: {
