@@ -1,5 +1,5 @@
 .banner {
-  background-color: $dusty-gray;
+  background-color: #9a9a9a;
   background-image: url("~@/assets/images/banner-bg.jpg");
   background-position: center;
   background-size: cover;
@@ -20,7 +20,7 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 52px;
-    color: $dusty-gray;
+    color: #9a9a9a;
   }
 
   @include minitablet {

@@ -1,4 +1,5 @@
 import { createApp } from "vue";
+import { toastOptions } from "./configs/toast-options.js";
 import App from "./App.vue";
 import router from "@/router/router";
 import store from "@/store/index.js";
@@ -17,18 +18,12 @@ components.forEach((component) => {
   app.component(component.name, component);
 });
 
-const options = {
-  transition: "Vue-Toastification__bounce",
-  maxToasts: 20,
-  newestOnTop: true,
-};
-
 app
   .component("v-select", vSelect)
   .component("VueDatePicker", VueDatePicker)
   .use(router)
   .use(store)
-  .use(Toast, options)
+  .use(Toast, toastOptions)
   .use(VueGoogleMaps, {
     load: {
       key: "",

@@ -10,7 +10,7 @@
   &__header {
     font-weight: 700;
     font-size: 40px;
-    color: $tundora;
+    color: #484848;
     margin-left: 31px;
     margin-bottom: 22px;
   }
@@ -50,7 +50,7 @@
     border-image-slice: 1;
 
     &::placeholder {
-      color: $dusty-gray;
+      color: #9a9a9a;
     }
   }
 
@@ -58,6 +58,7 @@
     border-radius: 35px 0 0 35px;
     width: 281px;
     padding-left: 23px;
+    padding-right: 10px;
     display: inline-block;
 
     & vs__dropdown-toggle {
@@ -92,7 +93,7 @@
     font-weight: 600;
     font-size: 12px;
     line-height: 15px;
-    color: $tundora;
+    color: #484848;
     z-index: 1;
 
     &--datein {
@@ -131,10 +132,12 @@
     bottom: 0;
     width: 54px;
     height: 54px;
-    background-color: $tundora;
-    color: #fff;
+    background-color: #484848;
+    color: #ffffff;
     border-radius: 10em;
     border: none;
+    transition: background-color 0.5s ease;
+
 
     &:hover,
     &:focus {

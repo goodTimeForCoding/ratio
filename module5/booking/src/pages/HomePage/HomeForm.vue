@@ -24,6 +24,7 @@
         :enable-time-picker="false"
         auto-apply
         @update:model-value="setDateIn"
+        :auto-position="false"
       />
     </label>
 
@@ -37,6 +38,7 @@
         :enable-time-picker="false"
         auto-apply
         @update:model-value="setDateOut"
+        :auto-position="false"
       />
     </label>
 
@@ -155,9 +157,34 @@ export default {
 </style>
 
 <style>
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 .hero-form__input-city .vs__dropdown-toggle {
   padding: 0;
   border: none;
+}
+
+.hero-form__input-city .vs__dropdown-menu {
+  border-radius: 5%;
+}
+
+.hero-form__input-city .vs__dropdown-menu::-webkit-scrollbar {
+  width: 0px;
+  height: 7px;
+  background-color: transparent;
+}
+
+.hero-form__input-city .vs__dropdown-menu::-webkit-scrollbar-thumb {
+  background-color: #9a9a9a;
+  border-radius: 5px;
 }
 
 .hero-form__input-city .vs__search,
@@ -205,8 +232,25 @@ export default {
   width: 225px;
 }
 
+.hero-form__input-datein .dp__menu,
+.hero-form__input-dateout .dp__menu {
+  top: 66px !important;
+}
+
 .hero-form__input-datein .dp__icon,
 .hero-form__input-dateout .dp__icon {
   display: none;
 }
+
+.hero-form__input-city .vs__selected-options {
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+/* @media (max-width: (1024px)) {
+  .hero-form__input-city .vs__selected-options {
+    flex-wrap: nowrap;
+    overflow: hidden;
+  }
+} */
 </style>

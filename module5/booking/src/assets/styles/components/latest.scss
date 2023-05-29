@@ -16,12 +16,12 @@
     padding-right: 19px;
     padding-bottom: 13px;
     padding-left: 21px;
-    background-color: $iron;
+    background-color: #e0e2e6;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 8px;
-    width: 21vw;
+    width: 350px;
     min-height: 340px;
 
     &:last-child {
@@ -44,14 +44,14 @@
     padding-top: 16px;
     font-weight: 700;
     font-size: 17px;
-    color: $tundora;
+    color: #484848;
   }
 
   &__card-address {
     font-weight: 500;
     font-size: 13px;
     line-height: 26px;
-    color: $dusty-gray;
+    color: #9a9a9a;
   }
 
   &__small-img {
@@ -72,13 +72,7 @@
     }
 
     &__card {
-      width: 35vw;
-    }
-  }
-
-  @include minitablet {
-    &__card {
-      width: 100%;
+      width: 310px;
     }
   }
 }

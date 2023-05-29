@@ -19,7 +19,7 @@
     font-weight: 700;
     font-size: 28px;
     line-height: 34px;
-    color: $tundora;
+    color: #484848;
   }
 
   &__address {
@@ -27,7 +27,7 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
-    color: $dusty-gray;
+    color: #9a9a9a;
   }
 
   &__properties {
@@ -42,7 +42,7 @@
     justify-content: center;
     width: 176px;
     height: 160px;
-    background-color: $athens-gray;
+    background-color: #eff0f2;
     border-radius: 8px;
   }
 
@@ -52,7 +52,7 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 20px;
-    color: $tundora;
+    color: #484848;
   }
 
   &__icons {
@@ -78,16 +78,26 @@
     margin: 0;
     margin-top: 27px;
     width: 324px;
+    transition: background-color 0.5s ease;
+
+    &:hover,
+    &:focus {
+      background-color: #333333;
+    }
+
+    &:active {
+      background-color: #1f1f1f;
+    }
   }
 
   &__price {
     margin: 0;
     padding-bottom: 25px;
-    border-bottom: 1px solid $iron;
+    border-bottom: 1px solid #e0e2e6;
     font-weight: 700;
     font-size: 22px;
     line-height: 27px;
-    color: $tundora;
+    color: #484848;
   }
 
   @include minitablet {

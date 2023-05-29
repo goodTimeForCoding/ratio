@@ -26,6 +26,8 @@
 
 .container {
   padding: 0 5.85%;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .btn {
@@ -35,11 +37,12 @@
     font-weight: 600;
     position: relative;
     display: inline-block;
-    background: $iron;
+    background: #e0e2e6;
     padding: 18px 29px 18px 65px;
     text-decoration: none;
-    color: $tundora;
+    color: #484848;
     border-radius: 6px;
+    transition: background-color 0.5s ease;
 
     &:hover,
     &:focus {
@@ -58,12 +61,13 @@
     margin-right: 17px;
     font-family: 'Montserrat';
     font-weight: 700;
-    background: $tundora;
+    background: #484848;
     padding: 22px 117px 19px 117px;
     text-decoration: none;
     color: white;
     border-radius: 30px;
     font-size: 16px;
+    transition: background-color 0.5s ease;
 
     &:hover,
     &:focus {
@@ -79,18 +83,19 @@
     display: block;
     font-family: 'Montserrat';
     font-weight: 600;
-    background: $tundora;
+    background: #484848;
     padding: 22px 35px 18px;
-    color: $tundora;
+    color: #484848;
     text-decoration: none;
     background: #FFFFFF;
-    border: 1px solid $tundora;
+    border: 1px solid #484848;
     border-radius: 6px;
     font-size: 15px;
+    transition: box-shadow 0.5s ease;
 
     &:hover,
     &:focus {
-      box-shadow: 5px 5px 5px $tundora;
+      box-shadow: 5px 5px 5px #484848;
     }
 
     &:active {
@@ -106,7 +111,7 @@
   font-weight: 700;
   font-size: 36px;
   line-height: 48px;
-  color: $tundora;
+  color: #484848;
   margin: 0;
 
   &--decore {
@@ -119,7 +124,7 @@
       left: 0;
       width: 140px;
       height: 6px;
-      background-color: $tundora;
+      background-color: #484848;
       border-radius: 3px;
     }
   }

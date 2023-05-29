@@ -105,6 +105,7 @@ export default {
     width: 100%;
     height: 338px;
     border-radius: 12px;
+    object-fit: cover;
   }
 
   @include minitablet {

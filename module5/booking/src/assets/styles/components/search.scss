@@ -3,6 +3,8 @@
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 40px;
+  max-width: 1920px;
+  margin: 0 auto;
 
   &__title {
     margin: 0;
@@ -10,7 +12,7 @@
     font-family: "Montserrat";
     font-weight: 700;
     font-size: 24px;
-    color: $tundora;
+    color: #484848;
   }
 
   &__text {
@@ -20,7 +22,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
-    color: $tundora;
+    color: #484848;
   }
 
   &__left {

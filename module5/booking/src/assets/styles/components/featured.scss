@@ -12,7 +12,7 @@
   }
 
   &__card {
-    width: 25vw;
+    max-width: 455px;
   }
 
   @include middledesk {

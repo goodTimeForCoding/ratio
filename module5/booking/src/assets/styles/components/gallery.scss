@@ -1,8 +1,10 @@
 .gallery {
+  max-width: 1600px;
+  margin: 0 auto;
   display: grid;
   gap: 17px;
-  grid-template-columns: 48.82vw 1fr 1fr;
-  grid-template-rows: 19.18vw 19.18vw;
+  grid-template-columns: 667px 1fr 1fr;
+  grid-template-rows: 264px 264px;
 
   &__all-img {
     display: flex;
@@ -25,16 +27,23 @@
     height: 100%;
   }
 
+  .is-cursor:hover &__more-wrap {
+    transition: color 0.5s ease;
+    color: black;
+  }
+
   &__big-img {
     width: 100%;
     height: 100%;
     border-radius: 16px;
+    object-fit: cover
   }
 
   &__small-img {
     width: 100%;
     height: 100%;
     border-radius: 16px;
+    object-fit: cover
   }
 
   &__more-wrap {
@@ -42,7 +51,7 @@
     position: absolute;
     bottom: 101px;
     left: 75px;
-    color: $tundora;
+    color: #484848;
   }
 
   &__more {
@@ -69,8 +78,8 @@
 
   @include tablet {
     &__more-wrap {
-      left: 20%;
-      bottom: 40%;
+      left: 10px;
+      bottom: 45px;
     }
   }
 
@@ -91,6 +100,10 @@
 
     &__photos {
       font-size: 16px;
+    }
+
+    &__more-wrap {
+      bottom: 10px;
     }
   }
 }

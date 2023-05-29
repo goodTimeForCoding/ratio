@@ -28,7 +28,7 @@ export default {
 .hero {
   padding-top: 312px;
   padding-bottom: 76px;
-  background-color: $dusty-gray;
+  background-color: #9a9a9a;
   background-image: url("~@/assets/images/hero-img.png");
   background-size: cover;
   background-position: center;
