@@ -1,5 +1,7 @@
 import { createApp } from "vue";
 import { toastOptions } from "./configs/toast-options.js";
+import { spritePluginOptions } from "./configs/sprite-plugin-options.js";
+import { mapOptions } from "./configs/map-options.js";
 import App from "./App.vue";
 import router from "@/router/router";
 import store from "@/store/index.js";
@@ -12,7 +14,6 @@ import "@vuepic/vue-datepicker/dist/main.css";
 import Toast from "vue-toastification";
 import "vue-toastification/dist/index.css";
 import {svgSpritePlugin} from 'vue-svg-sprite';
-import svgSprite from '@/assets/images/icons/icons.svg';
 
 const app = createApp(App);
 components.forEach((component) => {
@@ -25,13 +26,6 @@ app
   .use(router)
   .use(store)
   .use(Toast, toastOptions)
-  .use(svgSpritePlugin, {
-    url: svgSprite,
-    class: 'icon',
-})
-  .use(VueGoogleMaps, {
-    load: {
-      key: "",
-    },
-  })
+  .use(svgSpritePlugin, spritePluginOptions)
+  .use(VueGoogleMaps, mapOptions)
   .mount("#app");
