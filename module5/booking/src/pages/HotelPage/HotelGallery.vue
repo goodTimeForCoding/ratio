@@ -1,5 +1,10 @@
 <template>
-  <section class="gallery hotel__gallery" :class="{ 'gallery__all-img': isAllImg }">
+  <TransitionGroup
+    name="gallery"
+    class="gallery hotel__gallery"
+    :class="{ 'gallery__all-img': isAllImg }"
+    tag="section"
+  >
     <div class="gallery__big-img-wrap">
       <img class="gallery__big-img" :src="`${data.image}`" alt="main image" />
       <hotel-author :data="data" />
@@ -37,7 +42,7 @@
     >
       <img class="gallery__small-img" :src="`${img}`" alt="small img" />
     </div>
-  </section>
+  </TransitionGroup>
 </template>
 
 <script>
@@ -176,7 +181,24 @@ export default {
     }
   }
 }
+
 .is-cursor {
   cursor: pointer;
+}
+
+.gallery-move,
+.gallery-enter-active,
+.gallery-leave-active {
+  transition: all 0.5s ease;
+}
+
+.gallery-enter-from {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.gallery-leave-to {
+  opacity: 0;
+  transform: translateX(-100%);
 }
 </style>
