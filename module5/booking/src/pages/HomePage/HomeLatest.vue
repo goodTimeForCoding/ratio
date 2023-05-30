@@ -63,8 +63,8 @@ export default {
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 8px;
-    width: 350px;
-    min-height: 340px;
+    width: 274px;
+    height: 340px;
 
     &:last-child {
       margin-right: 0;
@@ -100,22 +100,6 @@ export default {
     width: 70px;
     height: 70px;
     border-radius: 50%;
-  }
-
-  @include middledesk {
-    &__card {
-      width: 279px;
-    }
-  }
-
-  @include minidesk {
-    &__cards {
-      gap: 70px;
-    }
-
-    &__card {
-      width: 310px;
-    }
   }
 }
 </style>

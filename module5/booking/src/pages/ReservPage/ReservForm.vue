@@ -210,6 +210,17 @@ export default {
 </style>
 
 <style>
+.reserv-form__country .vs__dropdown-menu::-webkit-scrollbar {
+  width: 0px;
+  height: 7px;
+  background-color: transparent;
+}
+
+.reserv-form__country .vs__dropdown-menu::-webkit-scrollbar-thumb {
+  background-color: #9a9a9a;
+  border-radius: 5px;
+}
+
 .reserv-form__country .vs__dropdown-toggle {
   padding: 0;
   border: none;

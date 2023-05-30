@@ -48,7 +48,6 @@ export default {
 .search {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   gap: 40px;
   max-width: 1920px;
   margin: 0 auto;
@@ -90,6 +89,22 @@ export default {
 
   &__small-featured-wrap {
     position: absolute;
+  }
+
+  @include minidesk {
+    flex-wrap: wrap;
+    &__right {
+      width: 100%;
+    }
+    &__left {
+      margin-bottom: 10px;
+    }
+    &__text {
+      margin-top: 5px;
+    }
+    &__title {
+      margin-bottom: 40px;
+    }
   }
 }
 </style>

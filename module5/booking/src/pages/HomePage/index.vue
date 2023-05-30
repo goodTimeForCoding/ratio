@@ -84,6 +84,6 @@ export default {
 }
 
 .banner-wrap {
-  margin-bottom: 56px;
+  margin-bottom: 62px;
 }
 </style>

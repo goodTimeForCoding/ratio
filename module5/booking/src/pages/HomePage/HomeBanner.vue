@@ -32,6 +32,7 @@ export default {
     font-size: 39px;
     line-height: 52px;
     padding-bottom: 5px;
+    height: 107px;
   }
 
   &__descr {
@@ -43,7 +44,8 @@ export default {
 
   @include minitablet {
     &__title {
-      font-size: 33px;
+      font-size: 28px;
+      line-height: 40px;
     }
   }
 }

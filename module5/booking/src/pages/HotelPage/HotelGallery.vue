@@ -150,23 +150,31 @@ export default {
     line-height: 22px;
   }
 
+  @include minidesk {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    &__big-img-wrap {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+  }
+
   @include tablet {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+
     &__more-wrap {
       left: 10px;
       bottom: 45px;
     }
-  }
-
-  @include minitablet {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 10px;
 
     &__big-img-wrap {
       grid-column-start: 1;
       grid-column-end: 3;
     }
+  }
 
+  @include minitablet {
     &__num {
       margin-right: 10px;
       font-size: 29px;

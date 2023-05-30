@@ -47,19 +47,7 @@ export default {
   }
 
   &__card {
-    max-width: 455px;
-  }
-
-  @include middledesk {
-    &__card {
-      width: 382px;
-    }
-  }
-
-  @include minitablet {
-    &__card {
-      width: 100%;
-    }
+    width: 382px;
   }
 }
 </style>
