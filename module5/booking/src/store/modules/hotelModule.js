@@ -4,14 +4,13 @@ import { useToast } from "vue-toastification";
 const toast = useToast();
 
 export const hotelModule = {
-  //данные приложения
+
   state: () => ({
     hotelData: null,
     isHotelLoading: false,
     isDataLoaded: false,
   }),
 
-  //computed свойства(кэшируемые вычисляемые значения)
   getters: {
     all(state) {
       return state.hotelData;
@@ -26,7 +25,6 @@ export const hotelModule = {
     },
   },
 
-  //функции внутри которого мы меняем значения внутри какого-то поля в state
   mutations: {
     setHotelData(state, hotelData) {
       state.hotelData = hotelData;
@@ -41,7 +39,6 @@ export const hotelModule = {
     },
   },
 
-  //функции которые внутри себя исп-ют мутации
   actions: {
     async fetchHotelData({ commit }, id) {
       try {
@@ -58,6 +55,6 @@ export const hotelModule = {
       }
     },
   },
-  //всё что заключено в конкретный модуль будет иметь определённое пространство имён
+
   namespaced: true,
 };

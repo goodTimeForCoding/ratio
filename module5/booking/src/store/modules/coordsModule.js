@@ -38,8 +38,6 @@ export const coordsModule = {
     },
   },
 
-  /*используем rootGetters для получения id найденных отелей, далее получаем координаты используя запрос  
-  полной информации об отеле*/
   actions: {
     async fetchCoordsData({ state, commit, rootGetters }) {
       const searchData = rootGetters["search/all"];

@@ -19,5 +19,25 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/styles/components/hotel-descr.scss";
+.hotel-descr {
+  &__title {
+    margin: 0;
+    margin-bottom: 16px;
+    font-weight: 700;
+    font-size: 22px;
+    color: #484848;
+  }
+
+  &__text {
+    margin: 0;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: #9a9a9a;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+}
 </style>

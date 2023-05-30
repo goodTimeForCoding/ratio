@@ -13,6 +13,13 @@
 <script></script>
 
 <style scoped lang="scss">
-@import "@/assets/styles/components/header.scss";
-@import "@/assets/styles/components/footer.scss";
+.header {
+  padding: 27px 0;
+  background-color: #eff0f2;
+}
+
+.footer {
+  color: #484848;
+  background-color: #eff0f2;
+}
 </style>

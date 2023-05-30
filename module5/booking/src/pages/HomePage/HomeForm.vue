@@ -55,7 +55,7 @@
       />
     </label>
     <button class="btn-reset hero-form__btn" @click="searchHotelBtn" type="button">
-      <icon-base width="20" height="20" icon-name="search"><icon-search /></icon-base>
+      <SvgSprite symbol="search" size="20" />
     </button>
   </form>
 
@@ -64,8 +64,6 @@
   </my-dialog>
 </template>
 <script>
-import IconBase from "@/components/icons/IconBase.vue";
-import IconSearch from "@/components/icons/IconSearch.vue";
 import { useVuelidate } from "@vuelidate/core";
 import { required } from "@vuelidate/validators";
 import { mapGetters, mapActions } from "vuex";
@@ -140,11 +138,6 @@ export default {
     },
   },
 
-  components: {
-    IconBase,
-    IconSearch,
-  },
-
   computed: {
     ...mapGetters({
       location: "location/all",
@@ -153,7 +146,186 @@ export default {
 };
 </script>
 <style scoped lang="scss">
-@import "@/assets/styles/components/hero-form.scss";
+.hero-form {
+  position: relative;
+  margin: 0 auto;
+  max-width: 794px;
+
+  &__wrap {
+    display: flex;
+  }
+
+  &__header {
+    font-weight: 700;
+    font-size: 40px;
+    color: #484848;
+    margin-left: 31px;
+    margin-bottom: 22px;
+  }
+
+  &__field {
+    position: relative;
+  }
+
+  &__input {
+    border: none;
+    background: white;
+    font-family: "Montserrat";
+    padding: 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    padding-top: 36px;
+    padding-bottom: 13px;
+    border-right: 1px solid transparent;
+    -o-border-image: -o-linear-gradient(
+      bottom,
+      transparent 30%,
+      #dddddd 30%,
+      #dddddd 70%,
+      transparent 70%
+    );
+    border-image: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(30%, transparent),
+      color-stop(30%, #dddddd),
+      color-stop(70%, #dddddd),
+      color-stop(70%, transparent)
+    );
+    border-image: linear-gradient(
+      to top,
+      transparent 30%,
+      #dddddd 30%,
+      #dddddd 70%,
+      transparent 70%
+    );
+    border-image-slice: 1;
+
+    &::placeholder {
+      color: #9a9a9a;
+    }
+  }
+
+  &__input-city {
+    border-radius: 35px 0 0 35px;
+    width: 281px;
+    padding-left: 29px;
+    padding-right: 10px;
+    display: inline-block;
+
+    & vs__dropdown-toggle {
+      border: none;
+    }
+  }
+
+  &__input-datein {
+    display: inline-block;
+    padding-left: 17px;
+    width: 142px;
+  }
+
+  &__input-dateout {
+    display: inline-block;
+    padding-left: 17px;
+    width: 167px;
+  }
+
+  &__input-guests {
+    border: none;
+    border-radius: 0 35px 35px 0;
+    padding-left: 16px;
+    width: 203px;
+    padding-right: 80px;
+  }
+
+  &__caption {
+    position: absolute;
+    top: -17px;
+    left: 30px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    color: #484848;
+    z-index: 1;
+
+    &--datein {
+      left: 14px;
+    }
+
+    &--dateout {
+      left: 15px;
+    }
+
+    &--guests {
+      left: 14px;
+    }
+
+    @include tablet {
+      &--datein {
+        left: 30px;
+      }
+
+      &--dateout {
+        left: 30px;
+      }
+
+      &--guests {
+        left: 30px;
+      }
+    }
+  }
+
+  &__btn {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    right: 8px;
+    top: 79px;
+    bottom: 0;
+    width: 54px;
+    height: 54px;
+    background-color: #484848;
+    color: #ffffff;
+    border-radius: 10em;
+    border: none;
+    transition: background-color 0.5s ease;
+
+    &:hover,
+    &:focus {
+      background-color: #333333;
+    }
+
+    &:active {
+      background-color: #1f1f1f;
+    }
+  }
+
+  @include tablet {
+    max-width: 282px;
+
+    &__input {
+      border: none;
+    }
+
+    &__input-city,
+    &__input-datein,
+    &__input-dateout,
+    &__input-guests {
+      border-radius: 35px;
+      width: 283px;
+      margin-bottom: 10px;
+      padding-left: 30px;
+    }
+
+    &__btn {
+      position: static;
+      margin: 0 auto;
+      width: 140px;
+    }
+  }
+}
 </style>
 
 <style>
@@ -246,11 +418,4 @@ input[type="number"] {
   flex-wrap: nowrap;
   overflow: hidden;
 }
-
-/* @media (max-width: (1024px)) {
-  .hero-form__input-city .vs__selected-options {
-    flex-wrap: nowrap;
-    overflow: hidden;
-  }
-} */
 </style>

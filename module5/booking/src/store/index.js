@@ -6,9 +6,9 @@ import { hotelModule } from "@/store/modules/hotelModule.js";
 import { locationModule } from "@/store/modules/locationModule.js";
 import { searchModule } from "@/store/modules/searchModule.js";
 import { coordsModule } from "@/store/modules/coordsModule.js";
+import { reservModule } from "@/store/modules/reservModule.js";
 
 export default createStore({
-  //декомпозиция логики vuex стора
   modules: {
     latest: latestModule,
     banner: bannerModule,
@@ -17,6 +17,7 @@ export default createStore({
     location: locationModule,
     search: searchModule,
     coords: coordsModule,
+    reserv: reservModule,
   },
   strict: process.env.NODE_ENV !== "production",
 });

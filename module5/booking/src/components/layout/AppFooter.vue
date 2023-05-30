@@ -7,28 +7,22 @@
     <div class="footer__main">
       <div class="footer__info">
         <router-link to="/">
-          <icon-base
-            class="logo footer__logo"
-            width="149"
-            height="37"
-            icon-name="logo big"
-          >
-            <icon-logo-big />
-          </icon-base>
+          <SvgSprite symbol="footer-logo" size="151 45" class="logo footer__logo" />
         </router-link>
         <p class="footer__descr">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
           incididunt ut labore et dolore magna aliqua.
         </p>
         <div class="footer__store-wrap">
-          <a class="btn btn__app-link footer__playstore" href="https://play.google.com"
-            >PlayStore</a
-          >
+          <a class="btn btn__app-link footer__playstore" href="https://play.google.com">
+            PlayStore
+          </a>
           <a
             class="btn btn__app-link footer__appstore"
             href="https://www.apple.com/ru/app-store/"
-            >AppleStore</a
           >
+            AppleStore
+          </a>
         </div>
       </div>
       <div class="footer__about">
@@ -74,30 +68,22 @@
             <ul class="list-reset footer__socials socials">
               <li class="social__item">
                 <a href="https://facebook.com/" class="social__link">
-                  <icon-base width="24" height="24" icon-name="facebook"
-                    ><icon-facebook
-                  /></icon-base>
+                  <SvgSprite symbol="facebook" size="24" class="social__icon" />
                 </a>
               </li>
               <li class="social__item">
                 <a href="https://twitter.com/" class="social__link">
-                  <icon-base width="27" height="24" icon-name="twitter"
-                    ><icon-twitter
-                  /></icon-base>
+                  <SvgSprite symbol="twitter" size="27" class="social__icon" />
                 </a>
               </li>
               <li class="social__item">
                 <a href="https://www.instagram.com/" class="social__link">
-                  <icon-base width="24" height="24" icon-name="instagram"
-                    ><icon-instagram
-                  /></icon-base>
+                  <SvgSprite symbol="instagram" size="24" class="social__icon" />
                 </a>
               </li>
               <li class="social__item">
                 <a href="https://linkedin.com/" class="social__link">
-                  <icon-base width="24" height="24" icon-name="linkedin"
-                    ><icon-linkedin
-                  /></icon-base>
+                  <SvgSprite symbol="linkedin" size="24" class="social__icon" />
                 </a>
               </li>
             </ul>
@@ -119,13 +105,7 @@
 </template>
 
 <script>
-import IconBase from "@/components/icons/IconBase.vue";
-import IconFacebook from "@/components/icons/IconFacebook.vue";
-import IconInstagram from "@/components/icons/IconInstagram.vue";
-import IconLinkedin from "@/components/icons/IconLinkedin.vue";
-import IconTwitter from "@/components/icons/IconTwitter.vue";
 import FooterForm from "@/components/FooterForm.vue";
-import IconLogoBig from "@/components/icons/IconLogoBig.vue";
 
 const companyLinks = [
   { name: "About Us", path: "/about" },
@@ -150,18 +130,258 @@ export default {
     };
   },
   components: {
-    IconBase,
-    IconFacebook,
-    IconInstagram,
-    IconLinkedin,
-    IconTwitter,
     FooterForm,
-    IconLogoBig,
   },
 };
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/styles/components/footer.scss";
-@import "@/assets/styles/components/social.scss";
+.footer {
+  color: #484848;
+  background-color: #eff0f2;
+
+  &__form-wrap {
+    background-color: #e8eaec;
+    padding: 0 5.85%;
+  }
+
+  &__main {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 48px;
+    row-gap: 60px;
+    padding: 82px 5.85% 196px;
+  }
+
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    width: 382px;
+  }
+
+  &__logo {
+    width: 151px;
+    margin-bottom: 29px;
+    fill: #484848;
+
+    &:hover,
+    &:focus {
+      fill: #000000;
+    }
+  }
+
+  &__descr {
+    margin: 0 0 46px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px;
+    color: #9a9a9a;
+    max-width: 382px;
+  }
+
+  &__store-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+  }
+
+  &__playstore:before {
+    content: "";
+    position: absolute;
+    left: 30px;
+    top: 12px;
+    width: 22px;
+    height: 22px;
+    background-image: url("~@/assets/images/playstore.svg");
+    background-size: 22px 22px;
+  }
+
+  &__appstore {
+    padding-left: 60px;
+    padding-right: 27px;
+  }
+
+  &__appstore:before {
+    content: "";
+    position: absolute;
+    left: 21px;
+    top: 11px;
+    width: 24px;
+    height: 24px;
+    background-image: url("~@/assets/images/appstore.svg");
+    background-size: 24px 24px;
+  }
+
+  &__about {
+    width: 153px;
+  }
+
+  &__item {
+    margin-bottom: 14px;
+    cursor: pointer;
+
+    &--socials {
+      margin-top: 35px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 28px;
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: 15px;
+    color: #484848;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #9a9a9a;
+    }
+
+    &:active {
+      color: black;
+    }
+  }
+
+  &__help {
+    width: 153px;
+  }
+
+  &__contact {
+    margin-left: 10px;
+    width: 303px;
+  }
+
+  &__socials {
+    display: flex;
+  }
+
+  &__bottom {
+    padding: 40px 5.85% 42px;
+    border-top: 1px solid #e0e2e6;
+  }
+
+  &__bottom-wrap {
+    @include flex-all-sb;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  &__copyright-text {
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  @include minidesk {
+    &__main {
+      justify-content: space-between;
+      column-gap: 20px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    &__info {
+      width: 260px;
+    }
+
+    &__about {
+      width: auto;
+    }
+
+    &__help {
+      width: auto;
+    }
+
+    &__contact {
+      width: 270px;
+    }
+
+    &__contact {
+      margin-left: 0px;
+    }
+
+    &__playstore {
+      margin-right: 0px;
+      width: 175px;
+    }
+
+    &__appstore {
+      width: 175px;
+    }
+  }
+
+  @include tablet {
+    &__main {
+      column-gap: 35px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &__info {
+      width: 380px;
+    }
+  }
+
+  @include minitablet {
+    &__main {
+      column-gap: 15px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &__info {
+      display: block;
+      width: auto;
+      min-width: 260px;
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    &__about {
+      width: 135px;
+    }
+
+    &__contact {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    &__copyright-text {
+      font-size: 11px;
+    }
+  }
+}
+
+.social {
+  & {
+    @include flex-v-center;
+  }
+
+  &__item {
+    margin: 0;
+    margin-right: 24px;
+  }
+
+  &__item:last-child {
+    margin-right: 0;
+  }
+
+  &__link {
+    display: block;
+  }
+
+  &__icon {
+    fill: #484848;
+  }
+
+  &__icon:hover,
+  &__icon:focus {
+    fill: #000000;
+  }
+}
 </style>

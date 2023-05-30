@@ -1,9 +1,7 @@
 <template>
   <div class="header__container container">
-    <router-link class="logo header__logo" to="/">
-      <icon-base width="104" height="26" icon-name="logo">
-        <icon-logo />
-      </icon-base>
+    <router-link to="/">
+      <SvgSprite symbol="header-logo" size="104 26" class="logo header__logo-icon" />
     </router-link>
     <HeaderNav />
   </div>
@@ -11,17 +9,39 @@
 
 <script>
 import HeaderNav from "@/components/HeaderNav.vue";
-import IconBase from "@/components/icons/IconBase.vue";
-import IconLogo from "@/components/icons/IconLogo.vue";
 export default {
   components: {
     HeaderNav,
-    IconBase,
-    IconLogo,
   },
 };
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/styles/components/header.scss";
+.header {
+  padding: 27px 0;
+  background-color: #eff0f2;
+
+  &__container {
+    @include flex-v-center;
+  }
+
+  &__logo-icon {
+    fill: #484848;
+    margin-right: 133px;
+    min-width: 108px;
+  }
+
+  &__logo-icon:hover,
+  &__logo-icon:focus {
+    fill: #000000;
+  }
+
+  @include tablet {
+    padding: 20px 0;
+
+    &__container {
+      justify-content: space-between;
+    }
+  }
+}
 </style>

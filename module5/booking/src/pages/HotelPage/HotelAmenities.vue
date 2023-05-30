@@ -46,5 +46,36 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/styles/components/hotel-amenities.scss";
+.hotel-amenities {
+  &__title {
+    margin: 0;
+    margin-bottom: 28px;
+    font-family: "Milliard";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    color: #484848;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 16px;
+    max-width: 672px;
+    font-family: "Milliard";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #484848;
+  }
+
+  &__item {
+    display: flex;
+    margin-bottom: 25px;
+  }
+
+  &__item-text {
+    padding-left: 17px;
+  }
+}
 </style>

@@ -33,5 +33,33 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/styles/components/featured.scss";
+.featured {
+  &__header {
+    margin-bottom: 62px;
+  }
+
+  &__cards {
+    @include flex-all-sb;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 54px;
+    column-gap: 15px;
+  }
+
+  &__card {
+    max-width: 455px;
+  }
+
+  @include middledesk {
+    &__card {
+      width: 382px;
+    }
+  }
+
+  @include minitablet {
+    &__card {
+      width: 100%;
+    }
+  }
+}
 </style>

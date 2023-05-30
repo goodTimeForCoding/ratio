@@ -66,11 +66,7 @@
 <script>
 import { useVuelidate } from "@vuelidate/core";
 import { required, email } from "@vuelidate/validators";
-import { mapGetters } from "vuex";
-import axios from "axios";
-import { useToast } from "vue-toastification";
-
-const toast = useToast();
+import { mapActions, mapGetters } from "vuex";
 
 export default {
   setup() {
@@ -115,19 +111,12 @@ export default {
   },
 
   methods: {
+    ...mapActions({
+      postReservData: "reserv/postReservData",
+    }),
+
     showNoValidDialog() {
       this.errorVisible = true;
-    },
-
-    resetForm() {
-      this.reservForm.first_name = "";
-      this.reservForm.last_name = "";
-      this.reservForm.info_1 = "";
-      this.reservForm.info_2 = "";
-      this.reservForm.country = "";
-      this.reservForm.contact.email = "";
-      this.reservForm.phone = "";
-      this.reservForm.comment = "";
     },
 
     adaptForm() {
@@ -143,32 +132,13 @@ export default {
       };
     },
 
-    postRequest(reset) {
-      axios({
-        method: "post",
-        url: "https://module5.vue.panfilov.academy/order",
-        data: this.adaptForm(),
-        headers: {
-          "Content-type": "application/json; charset=UTF-8",
-        },
-      })
-        .then(function (response) {
-          reset();
-          toast.success("The apartments are booked!");
-          ym(93555198, "reachGoal", "website__order-success");
-        })
-        .catch(function (error) {
-          toast.error("Server error try booking later!");
-          ym(93555198, "reachGoal", "website__order-error");
-        });
-    },
-
     async reservHotels() {
+      const data = this.adaptForm();
       const result = await this.v$.$validate();
       if (!result) {
         this.showNoValidDialog();
       } else {
-        this.postRequest(this.resetForm);
+        this.postReservData(data);
       }
     },
   },
@@ -182,7 +152,61 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/styles/components/reserv-form.scss";
+.reserv-form {
+  &__input {
+    border: none;
+    font-family: "Montserrat";
+    height: 50px;
+    background: white;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    border-bottom: 1px solid black;
+    padding-left: 13px;
+
+    &::placeholder {
+      font-weight: 500;
+      font-size: 14px;
+      color: #959595;
+    }
+  }
+
+  &__first-name,
+  &__info1,
+  &__country {
+    display: inline-block;
+    margin-right: 12px;
+    margin-bottom: 9px;
+  }
+
+  &--short {
+    width: 328px;
+  }
+
+  &--long {
+    width: 670px;
+  }
+
+  &__phone {
+    margin-bottom: 9px;
+  }
+
+  @include minitablet {
+    &--short {
+      width: 100%;
+    }
+
+    &--long {
+      width: 100%;
+    }
+
+    &__btn {
+      padding: 22px 70px 19px 70px;
+      margin: 0 auto;
+      margin-top: 24px;
+    }
+  }
+}
 </style>
 
 <style>

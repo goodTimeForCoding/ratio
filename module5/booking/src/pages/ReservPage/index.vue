@@ -35,5 +35,28 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/styles/components/reserv.scss";
+.reserv {
+  margin-top: 77px;
+  margin-bottom: 80px;
+  padding: 0 5%;
+
+  &__wrap {
+    @include flex-h-center;
+    gap: 49px;
+    flex-wrap: wrap;
+  }
+
+  &__form-wrap {
+    max-width: 699px;
+  }
+
+  @include minidesk {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    &__form-wrap {
+      order: 1;
+    }
+  }
+}
 </style>

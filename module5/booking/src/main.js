@@ -11,9 +11,10 @@ import VueDatePicker from "@vuepic/vue-datepicker";
 import "@vuepic/vue-datepicker/dist/main.css";
 import Toast from "vue-toastification";
 import "vue-toastification/dist/index.css";
+import {svgSpritePlugin} from 'vue-svg-sprite';
+import svgSprite from '@/assets/images/icons/icons.svg';
 
 const app = createApp(App);
-//глобальные UI компоненты
 components.forEach((component) => {
   app.component(component.name, component);
 });
@@ -24,6 +25,10 @@ app
   .use(router)
   .use(store)
   .use(Toast, toastOptions)
+  .use(svgSpritePlugin, {
+    url: svgSprite,
+    class: 'icon',
+})
   .use(VueGoogleMaps, {
     load: {
       key: "",

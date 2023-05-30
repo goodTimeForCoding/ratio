@@ -4,20 +4,17 @@ import { useToast } from "vue-toastification";
 const toast = useToast();
 
 export const latestModule = {
-  //данные приложения
   state: () => ({
     latestData: null,
     isLatestLoading: false,
   }),
 
-  //computed свойства(кэшируемые вычисляемые значения)
   getters: {
     all(state) {
       return state.latestData;
     },
   },
 
-  //функции внутри которого мы меняем значения внутри какого-то поля в state
   mutations: {
     setLatestData(state, latestData) {
       state.latestData = latestData;
@@ -28,7 +25,6 @@ export const latestModule = {
     },
   },
 
-  //функции которые внутри себя исп-ют мутации
   actions: {
     async fetchLatestData({ state, commit }) {
       try {
@@ -46,6 +42,5 @@ export const latestModule = {
     },
   },
 
-  //всё что заключено в конкретный модуль будет иметь определённое пространство имён
   namespaced: true,
 };

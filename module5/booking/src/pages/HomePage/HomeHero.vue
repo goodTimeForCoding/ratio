@@ -24,10 +24,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/styles/main.scss";
 .hero {
   padding-top: 312px;
-  padding-bottom: 76px;
+  padding-bottom: 79px;
   background-color: #9a9a9a;
   background-image: url("~@/assets/images/hero-img.png");
   background-size: cover;

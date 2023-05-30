@@ -28,7 +28,6 @@ export default {
     }),
   },
 
-  //получаем координаты из полного контента по ID отеля
   created() {
     this.fetchCoordsData();
   },

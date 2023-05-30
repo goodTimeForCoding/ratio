@@ -3,46 +3,34 @@
     <h2 class="hotel-reviews__title">
       Reviews
       <span class="hotel-reviews__title-icon">
-        <icon-base width="20" height="20" icon-name="star">
-          <icon-star />
-        </icon-base>
+        <SvgSprite symbol="star" size="20 20" />
       </span>
       5.0
     </h2>
     <ul class="list-reset hotel-reviews__indicators">
       <li class="hotel-reviews__indicator">
         <span class="hotel-reviews__indicator-text"> Amenities </span>
-        <icon-base width="135" height="4" icon-name="scale">
-          <icon-scale />
-        </icon-base>
+        <SvgSprite symbol="scale" size="135 4" />
         <span class="hotel-reviews__indicator-num"> 5.0 </span>
       </li>
       <li class="hotel-reviews__indicator">
         <span class="hotel-reviews__indicator-text"> Hygiene </span>
-        <icon-base width="135" height="4" icon-name="scale">
-          <icon-scale />
-        </icon-base>
+        <SvgSprite symbol="scale" size="135 4" />
         <span class="hotel-reviews__indicator-num"> 5.0 </span>
       </li>
       <li class="hotel-reviews__indicator">
         <span class="hotel-reviews__indicator-text"> Communication </span>
-        <icon-base width="135" height="4" icon-name="scale">
-          <icon-scale />
-        </icon-base>
+        <SvgSprite symbol="scale" size="135 4" />
         <span class="hotel-reviews__indicator-num"> 5.0 </span>
       </li>
       <li class="hotel-reviews__indicator">
         <span class="hotel-reviews__indicator-text"> Location of Property </span>
-        <icon-base width="135" height="4" icon-name="scale">
-          <icon-scale />
-        </icon-base>
+        <SvgSprite symbol="scale" size="135 4" />
         <span class="hotel-reviews__indicator-num"> 5.0 </span>
       </li>
       <li class="hotel-reviews__indicator">
         <span class="hotel-reviews__indicator-text"> Value for Money </span>
-        <icon-base width="135" height="4" icon-name="scale">
-          <icon-scale />
-        </icon-base>
+        <SvgSprite symbol="scale" size="135 4" />
         <span class="hotel-reviews__indicator-num"> 5.0 </span>
       </li>
     </ul>
@@ -65,16 +53,10 @@
 </template>
 
 <script>
-import IconBase from "@/components/icons/IconBase.vue";
-import IconStar from "@/components/icons/IconStar.vue";
-import IconScale from "@/components/icons/IconScale.vue";
 import HotelReviewsList from "@/pages/HotelPage/HotelReviewsList.vue";
 import { mapState } from "vuex";
 export default {
   components: {
-    IconBase,
-    IconStar,
-    IconScale,
     HotelReviewsList,
   },
 
@@ -101,6 +83,79 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/styles/components/hotel-reviews.scss";
-@import "@/assets/styles/components/review.scss";
+.hotel-reviews {
+  max-width: 800px;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 27px;
+    font-weight: 700;
+    font-size: 22px;
+    color: #484848;
+  }
+
+  &__title-icon {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+
+  &__indicator {
+    @include flex-v-center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    max-width: 366px;
+  }
+
+  &__indicators {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 16px;
+    column-gap: 20px;
+    width: 100%;
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 16px;
+    color: #484848;
+  }
+
+  &__wrap {
+    margin-top: 35px;
+    margin-bottom: 48px;
+  }
+
+  &__indicator-text {
+    flex-grow: 1;
+  }
+
+  &__indicator-num {
+    margin-left: 12px;
+  }
+
+  &__items {
+    @include flex;
+    column-gap: 60px;
+    row-gap: 40px;
+    flex-wrap: wrap;
+    max-width: 800px;
+  }
+
+  &__item {
+    max-width: 360px;
+  }
+
+  @include minitablet {
+    &__indicators {
+      display: block;
+      font-size: 11px;
+    }
+  }
+
+  @include mobile {
+    &__indicators {
+      font-size: 11px;
+    }
+  }
+}
 </style>

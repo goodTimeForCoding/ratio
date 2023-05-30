@@ -13,7 +13,6 @@ export default {
   },
   methods: {
     updateInput(event) {
-      //передаём наверх поле value у таргета
       this.$emit("update:modelValue", event.target.value);
     },
   },

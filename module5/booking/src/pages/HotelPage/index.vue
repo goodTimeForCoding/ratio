@@ -74,5 +74,45 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/styles/components/hotel.scss";
+.hotel {
+  &__gallery {
+    padding: 0 8px;
+    margin-top: 30px;
+    margin-bottom: 88px;
+  }
+
+  &__info {
+    margin-bottom: 58px;
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 25px;
+    color: #484848;
+  }
+
+  &__amenities {
+    margin-bottom: 51px;
+  }
+
+  &__descr {
+    margin-bottom: 56px;
+  }
+
+  &__wrap {
+    max-width: 750px;
+  }
+
+  &__reviews {
+    margin-top: 28px;
+    margin-bottom: 50px;
+  }
+
+  &__location {
+    max-width: 790px;
+    height: 420px;
+  }
+}
 </style>
